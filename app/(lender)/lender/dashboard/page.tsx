@@ -5,8 +5,21 @@ import {
   TrendingUp,
 } from "lucide-react";
 
+import dynamic from "next/dynamic";
+
 import { ApplicationStatusBadge, RiskTierBadge } from "@/components/shared/status-badge";
-import { ApiUsageChart } from "@/components/shared/api-usage-chart";
+import { Skeleton } from "@/components/ui/skeleton";
+
+const ApiUsageChart = dynamic(() => import("@/components/shared/api-usage-chart").then((m) => m.ApiUsageChart), {
+  loading: () => (
+    <div className="flex h-72 w-full items-end justify-around gap-3 px-6 pb-8 pt-4">
+      {[45, 70, 55, 80, 60, 75, 50].map((h, i) => (
+        <Skeleton key={i} className="w-10 rounded-t-lg bg-slate-100" style={{ height: `${h}%` }} />
+      ))}
+    </div>
+  ),
+  ssr: false,
+});
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Table,
@@ -67,15 +80,15 @@ export default function LenderOverviewPage() {
         </div>
       </section>
 
-      <div className="portal-metric-grid xl:grid-cols-4">
+      <div className="portal-metric-grid md:grid-cols-2 xl:grid-cols-4">
         {metrics.map((metric, index) => {
           const Icon = METRIC_ICONS[index];
           return (
             <div key={metric.label} className="portal-metric-card">
               <div className="flex items-center justify-between">
                 <p className="portal-metric-label">{metric.label}</p>
-                <div className="flex size-8 items-center justify-center rounded-lg border border-cyan-300/20 bg-cyan-400/8">
-                  <Icon className="size-4 text-cyan-300/70" />
+                <div className="flex size-8 items-center justify-center rounded-lg border border-indigo-200 bg-indigo-50">
+                  <Icon className="size-4 text-indigo-500" />
                 </div>
               </div>
               <p className="portal-metric-value mt-2">{metric.value}</p>
@@ -96,8 +109,8 @@ export default function LenderOverviewPage() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
-                  <CardTitle className="text-lg font-bold text-white">Recent Applications</CardTitle>
-                  <p className="text-xs text-slate-300/70">{applications.length} applications in queue</p>
+                  <CardTitle className="text-lg font-bold text-slate-900">Recent Applications</CardTitle>
+                  <p className="text-xs text-slate-500">{applications.length} applications in queue</p>
                 </div>
               </div>
             </CardHeader>
@@ -115,17 +128,17 @@ export default function LenderOverviewPage() {
                 </TableHeader>
                 <TableBody>
                   {applications.map((application, index) => (
-                    <TableRow key={application.id} className={index % 2 === 0 ? "bg-white/3" : undefined}>
+                    <TableRow key={application.id} className={index % 2 === 0 ? "bg-slate-50" : undefined}>
                       <TableCell className="font-medium">{application.consumerNameMasked}</TableCell>
                       <TableCell>
                         <span className="inline-flex items-center gap-1.5 text-xs">
-                          <span className="inline-flex size-5 items-center justify-center rounded bg-white/8 text-[0.6rem] font-bold uppercase">
+                          <span className="inline-flex size-5 items-center justify-center rounded bg-slate-50 text-[0.6rem] font-bold uppercase">
                             {application.countryCode}
                           </span>
                         </span>
                       </TableCell>
                       <TableCell>
-                        <span className="font-semibold text-white">{application.score}</span>
+                        <span className="font-semibold text-slate-900">{application.score}</span>
                       </TableCell>
                       <TableCell>
                         <RiskTierBadge riskTier={application.riskTier} />
@@ -133,7 +146,7 @@ export default function LenderOverviewPage() {
                       <TableCell>
                         <ApplicationStatusBadge status={application.status} />
                       </TableCell>
-                      <TableCell className="text-slate-300/80">{formatDate(application.submittedAt)}</TableCell>
+                      <TableCell className="text-slate-500">{formatDate(application.submittedAt)}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -146,8 +159,8 @@ export default function LenderOverviewPage() {
           <Card>
             <CardHeader>
               <div className="space-y-1">
-                <CardTitle className="text-lg font-bold text-white">API Usage (Last 30 Days)</CardTitle>
-                <p className="text-xs text-slate-300/70">Programmatic credit profile lookup volume</p>
+                <CardTitle className="text-lg font-bold text-slate-900">API Usage (Last 30 Days)</CardTitle>
+                <p className="text-xs text-slate-500">Programmatic credit profile lookup volume</p>
               </div>
             </CardHeader>
             <CardContent>

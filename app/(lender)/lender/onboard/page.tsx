@@ -145,7 +145,7 @@ export default function LenderOnboardPage() {
 
       <div className="portal-auth-frame max-w-6xl">
         <div className="flex items-center justify-between gap-4">
-          <Logo className="text-slate-50" />
+          <Logo />
           <div className="flex items-center gap-3">
             <span className="portal-pill-note">Institution setup</span>
             <Badge className="portal-chip">Step {step} of 4</Badge>
@@ -321,7 +321,7 @@ export default function LenderOnboardPage() {
                           checked={formState.useCases.includes(option)}
                           onCheckedChange={(checked) => toggleUseCase(option, Boolean(checked))}
                         />
-                        <span className="text-sm text-slate-100">{option}</span>
+                        <span className="text-sm text-slate-800">{option}</span>
                       </label>
                     ))}
                   </div>
@@ -345,7 +345,7 @@ export default function LenderOnboardPage() {
                   <div className="portal-code-block">
                     <div className="flex flex-wrap items-center justify-between gap-3">
                       <p className="flex items-center gap-2">
-                        <KeyRound className="text-cyan-200" />
+                        <KeyRound className="text-indigo-200" />
                         {apiKeyState.key}
                       </p>
                       <Button size="sm" variant="outline" onClick={handleCopy}>

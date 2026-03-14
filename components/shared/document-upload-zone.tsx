@@ -77,13 +77,13 @@ export function DocumentUploadZone({
             accept=".pdf,.jpg,.jpeg,.png"
             onChange={(event) => handleFileSelect(slot.key, event.target.files?.[0])}
           />
-          <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="space-y-1">
-              <p className="text-sm font-semibold text-white">
+              <p className="text-sm font-semibold text-slate-900">
                 {slot.label}
                 {slot.required ? " *" : ""}
               </p>
-              <p className="text-xs text-slate-200/80">{slot.helpText}</p>
+              <p className="text-xs text-slate-500">{slot.helpText}</p>
               {files[slot.key] ? (
                 <p className="portal-success-note">
                   <CheckCircle2 />

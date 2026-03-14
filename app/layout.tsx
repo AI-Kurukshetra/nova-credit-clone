@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Geist_Mono, Manrope, Sora } from "next/font/google";
 
+import { NavigationProgress } from "@/components/shared/navigation-progress";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
@@ -42,6 +44,9 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${sora.variable} ${geistMono.variable} antialiased`}
       >
+        <Suspense fallback={null}>
+          <NavigationProgress />
+        </Suspense>
         <TooltipProvider>
           {children}
           <Toaster richColors position="top-right" />

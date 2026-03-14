@@ -8,17 +8,17 @@ interface ScoreGaugeProps {
 /** Solid arc color by risk tier. */
 function arcStroke(score: number): string {
   if (score >= 750) return "#34d399";
-  if (score >= 670) return "#22d3ee";
+  if (score >= 670) return "#6366f1";
   if (score >= 580) return "#fbbf24";
   return "#fb7185";
 }
 
 /** Tailwind text-color class for the score number. */
 function scoreTextClass(score: number): string {
-  if (score >= 750) return "text-emerald-300";
-  if (score >= 670) return "text-cyan-300";
-  if (score >= 580) return "text-amber-300";
-  return "text-rose-300";
+  if (score >= 750) return "text-emerald-600";
+  if (score >= 670) return "text-indigo-500";
+  if (score >= 580) return "text-amber-600";
+  return "text-rose-500";
 }
 
 /** Risk tier label. */
@@ -31,10 +31,10 @@ function tierLabel(score: number): string {
 
 /** Tier badge styling. */
 function tierBadgeClass(score: number): string {
-  if (score >= 750) return "border-emerald-400/40 bg-emerald-500/15 text-emerald-200";
-  if (score >= 670) return "border-cyan-400/40 bg-cyan-500/15 text-cyan-200";
-  if (score >= 580) return "border-amber-400/40 bg-amber-500/15 text-amber-200";
-  return "border-rose-400/40 bg-rose-500/15 text-rose-200";
+  if (score >= 750) return "border-emerald-300 bg-emerald-50 text-emerald-700";
+  if (score >= 670) return "border-indigo-300 bg-indigo-50 text-indigo-700";
+  if (score >= 580) return "border-amber-300 bg-amber-50 text-amber-700";
+  return "border-rose-300 bg-rose-50 text-rose-700";
 }
 
 /*
@@ -81,7 +81,7 @@ export function ScoreGauge({ score, className }: ScoreGaugeProps): React.JSX.Ele
     <div className={cn("flex flex-col items-center gap-1.5", className)}>
       {/* The SVG is self-contained â€” no overflow needed */}
       <svg
-        className="h-[156px] w-[240px]"
+        className="h-[120px] w-[200px] sm:h-[156px] sm:w-[240px]"
         viewBox="0 0 200 130"
         preserveAspectRatio="xMidYMid meet"
         aria-hidden
@@ -90,7 +90,7 @@ export function ScoreGauge({ score, className }: ScoreGaugeProps): React.JSX.Ele
         <path
           d={TRACK}
           fill="none"
-          stroke="rgb(30 41 59 / 0.7)"
+          stroke="rgb(226 232 240 / 0.7)"
           strokeWidth={SW}
           strokeLinecap="round"
         />
@@ -112,7 +112,7 @@ export function ScoreGauge({ score, className }: ScoreGaugeProps): React.JSX.Ele
           cy={dot.y}
           r="6"
           fill={color}
-          stroke="rgb(15 23 42)"
+          stroke="rgb(255 255 255)"
           strokeWidth="2.5"
         />
 
@@ -136,7 +136,7 @@ export function ScoreGauge({ score, className }: ScoreGaugeProps): React.JSX.Ele
           x={CX}
           y={CY - 16 + 22}
           textAnchor="middle"
-          fill="rgb(148 163 184 / 0.7)"
+          fill="rgb(100 116 139 / 0.9)"
           fontSize="7.5"
           fontWeight="700"
           letterSpacing="0.18em"
@@ -149,7 +149,7 @@ export function ScoreGauge({ score, className }: ScoreGaugeProps): React.JSX.Ele
           x={LX}
           y={CY + 20}
           textAnchor="middle"
-          fill="rgb(148 163 184 / 0.55)"
+          fill="rgb(100 116 139 / 0.7)"
           fontSize="10"
           fontWeight="600"
         >
@@ -161,7 +161,7 @@ export function ScoreGauge({ score, className }: ScoreGaugeProps): React.JSX.Ele
           x={RX}
           y={CY + 20}
           textAnchor="middle"
-          fill="rgb(148 163 184 / 0.55)"
+          fill="rgb(100 116 139 / 0.7)"
           fontSize="10"
           fontWeight="600"
         >

@@ -1,14 +1,57 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
 
 import { CalendarDays, Search } from "lucide-react";
 import { toast } from "sonner";
 
-import { CreditTimeline } from "@/components/shared/credit-timeline";
 import { EmptyState } from "@/components/shared/empty-state";
-import { ScoreGauge } from "@/components/shared/score-gauge";
-import { ScoreBreakdownChart } from "@/components/shared/score-breakdown-chart";
+import { Skeleton } from "@/components/ui/skeleton";
+
+const CreditTimeline = dynamic(() => import("@/components/shared/credit-timeline").then((m) => m.CreditTimeline), {
+  loading: () => (
+    <div className="space-y-4 rounded-xl border border-slate-200 bg-white p-5">
+      <Skeleton className="h-5 w-64 rounded bg-slate-100" />
+      {[1, 2].map((i) => (
+        <div key={i} className="space-y-3 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
+          <div className="flex justify-between">
+            <Skeleton className="h-4 w-32 rounded bg-slate-100" />
+            <Skeleton className="h-5 w-16 rounded-full bg-slate-100" />
+          </div>
+          <div className="grid grid-cols-4 gap-3">
+            {[1, 2, 3, 4].map((j) => <Skeleton key={j} className="h-8 rounded bg-slate-100" />)}
+          </div>
+        </div>
+      ))}
+    </div>
+  ),
+  ssr: false,
+});
+
+const ScoreGauge = dynamic(() => import("@/components/shared/score-gauge").then((m) => m.ScoreGauge), {
+  loading: () => (
+    <div className="flex flex-col items-center gap-2">
+      <Skeleton className="h-[156px] w-[240px] rounded-[50%_50%_0_0] bg-slate-100" />
+      <Skeleton className="h-6 w-20 rounded-full bg-slate-100" />
+    </div>
+  ),
+  ssr: false,
+});
+
+const ScoreBreakdownChart = dynamic(() => import("@/components/shared/score-breakdown-chart").then((m) => m.ScoreBreakdownChart), {
+  loading: () => (
+    <div className="flex h-64 w-full flex-col justify-center gap-4 px-2">
+      {[75, 85, 55, 65, 60].map((w, i) => (
+        <div key={i} className="flex items-center gap-3">
+          <Skeleton className="h-3 w-28 shrink-0 rounded bg-slate-100" />
+          <Skeleton className="h-5 rounded-full bg-slate-100" style={{ width: `${w}%` }} />
+        </div>
+      ))}
+    </div>
+  ),
+  ssr: false,
+});
 import {
   ApplicationStatusBadge,
   RiskTierBadge,
@@ -122,7 +165,7 @@ export default function LenderApplicationsPage() {
         <CardHeader>
           <CardTitle>Filters</CardTitle>
         </CardHeader>
-        <CardContent className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+        <CardContent className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           <div className="flex flex-col gap-2">
             <Label>Status</Label>
             <Select value={statusFilter} onValueChange={(value) => setStatusFilter(value ?? "All")}>
@@ -204,7 +247,7 @@ export default function LenderApplicationsPage() {
           </TableHeader>
           <TableBody>
             {filteredApplications.map((application, index) => (
-              <TableRow key={application.id} className={index % 2 === 0 ? "bg-white/3" : undefined}>
+              <TableRow key={application.id} className={index % 2 === 0 ? "bg-slate-50" : undefined}>
                 <TableCell>{application.consumerNameMasked}</TableCell>
                 <TableCell>{application.countryCode}</TableCell>
                 <TableCell>{application.score}</TableCell>
@@ -240,7 +283,7 @@ export default function LenderApplicationsPage() {
               <Card>
                 <CardContent className="grid gap-4 p-4 sm:grid-cols-[1fr_auto] sm:items-center">
                   <div className="space-y-2">
-                    <p className="text-sm text-slate-300/80">CreditBridge score</p>
+                    <p className="text-sm text-slate-500">CreditBridge score</p>
                     <p className="text-4xl font-semibold">{selectedConsumer.profile.translatedScore}</p>
                     <RiskTierBadge riskTier={selectedConsumer.profile.riskTier} />
                     <Badge className="portal-status-info w-fit">

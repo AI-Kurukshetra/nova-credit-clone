@@ -16,36 +16,47 @@ function BrandMark(): React.JSX.Element {
       className="relative z-10 size-7"
       fill="none"
     >
+      {/* Bridge arch */}
       <path
-        d="M9 27C9 20.3726 14.3726 15 21 15H24C28.4183 15 32 18.5817 32 23V27"
-        stroke="currentColor"
-        strokeWidth="2.8"
+        d="M8 28C8 20 13.5 14 20.5 14H23.5C27.6 14 31 17.4 31 21.5V28"
+        stroke="url(#logo-arch)"
+        strokeWidth="2.6"
         strokeLinecap="round"
       />
+      {/* Bridge deck */}
       <path
-        d="M9 27H31"
-        stroke="#F8FAFC"
-        strokeOpacity="0.9"
-        strokeWidth="2.8"
+        d="M8 28H31"
+        stroke="url(#logo-deck)"
+        strokeWidth="2.6"
         strokeLinecap="round"
       />
+      {/* Upward arrow */}
       <path
-        d="M15 21L20 16L25 21"
-        stroke="#F8FAFC"
-        strokeOpacity="0.94"
-        strokeWidth="2.4"
+        d="M15 22L20 16.5L25 22"
+        stroke="#4338ca"
+        strokeWidth="2.2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M20 16V28"
-        stroke="#F8FAFC"
-        strokeOpacity="0.94"
-        strokeWidth="2.4"
+        d="M20 17V28"
+        stroke="#4338ca"
+        strokeWidth="2.2"
         strokeLinecap="round"
       />
-      <circle cx="10.5" cy="11.5" r="2.5" fill="#F8FAFC" fillOpacity="0.92" />
-      <circle cx="29.5" cy="11.5" r="2.5" fill="#F8FAFC" fillOpacity="0.68" />
+      {/* Accent dots */}
+      <circle cx="11" cy="11" r="2.5" fill="#4338ca" fillOpacity="0.85" />
+      <circle cx="29" cy="11" r="2.5" fill="#818cf8" fillOpacity="0.5" />
+      <defs>
+        <linearGradient id="logo-arch" x1="8" y1="14" x2="31" y2="28" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#4338ca" />
+          <stop offset="1" stopColor="#818cf8" />
+        </linearGradient>
+        <linearGradient id="logo-deck" x1="8" y1="28" x2="31" y2="28" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#4338ca" />
+          <stop offset="1" stopColor="#818cf8" />
+        </linearGradient>
+      </defs>
     </svg>
   );
 }
@@ -55,18 +66,17 @@ export function Logo({ className, href = "/", compact = false }: LogoProps): Rea
     <Link
       href={href}
       className={cn(
-        "group inline-flex items-center gap-3 rounded-xl text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+        "group inline-flex items-center gap-2.5 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
         className,
       )}
       aria-label="CreditBridge"
     >
-      <span className="relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-[1.1rem] border border-current/15 bg-[linear-gradient(145deg,rgba(14,165,233,0.22),rgba(37,99,235,0.12)_52%,rgba(16,185,129,0.22))] text-current shadow-[0_10px_24px_rgba(2,6,23,0.16)] transition-transform duration-200 group-hover:-translate-y-0.5">
-        <span className="absolute inset-[1px] rounded-[1rem] bg-[radial-gradient(circle_at_25%_25%,rgba(255,255,255,0.28),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))]" />
+      <span className="relative flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-indigo-200/60 bg-gradient-to-br from-indigo-50 via-white to-indigo-50 shadow-sm transition-transform duration-200 group-hover:-translate-y-0.5">
         <BrandMark />
       </span>
       {!compact && (
-        <span className="text-lg font-semibold tracking-[-0.04em] text-current">
-          Credit<span className="opacity-80">Bridge</span>
+        <span className="text-lg font-semibold tracking-[-0.03em]">
+          <span className="text-slate-900">Credit</span><span className="text-indigo-600">Bridge</span>
         </span>
       )}
     </Link>

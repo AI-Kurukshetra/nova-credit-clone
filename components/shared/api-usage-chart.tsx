@@ -26,26 +26,26 @@ export function ApiUsageChart({ data }: ApiUsageChartProps): React.JSX.Element {
   }, []);
 
   if (!mounted) {
-    return <Skeleton className="h-72 w-full bg-white/10" />;
+    return <Skeleton className="h-72 w-full bg-slate-100" />;
   }
 
   return (
     <div className="h-72 w-full">
       <ResponsiveContainer>
         <BarChart data={data}>
-          <CartesianGrid stroke="rgba(191,219,254,0.1)" strokeDasharray="3 3" vertical={false} />
-          <XAxis dataKey="day" stroke="rgba(191,219,254,0.5)" tick={{ fill: "rgba(224,242,254,0.8)", fontSize: 11 }} />
-          <YAxis stroke="rgba(191,219,254,0.5)" tick={{ fill: "rgba(224,242,254,0.8)", fontSize: 11 }} />
+          <CartesianGrid stroke="rgba(226,232,240,0.6)" strokeDasharray="3 3" vertical={false} />
+          <XAxis dataKey="day" stroke="rgba(148,163,184,0.5)" tick={{ fill: "rgb(71,85,105)", fontSize: 11 }} />
+          <YAxis stroke="rgba(148,163,184,0.5)" tick={{ fill: "rgb(71,85,105)", fontSize: 11 }} />
           <Tooltip
             contentStyle={{
-              background: "rgba(3,11,27,0.96)",
-              border: "1px solid rgba(186,230,253,0.16)",
+              background: "rgba(255,255,255,0.98)",
+              border: "1px solid rgba(226,232,240,0.8)",
               borderRadius: "14px",
-              color: "#f8fafc",
+              color: "#1e293b",
             }}
-            labelStyle={{ color: "rgba(186,230,253,0.8)" }}
+            labelStyle={{ color: "rgb(71,85,105)" }}
           />
-          <Bar dataKey="calls" fill="#67e8f9" radius={[8, 8, 0, 0]} />
+          <Bar dataKey="calls" fill="#6366f1" radius={[8, 8, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

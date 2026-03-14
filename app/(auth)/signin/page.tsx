@@ -4,16 +4,20 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Globe2,
+  LogIn,
+  ShieldCheck,
+} from "lucide-react";
 import { toast } from "sonner";
 
 import { Logo } from "@/components/shared/logo";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { APP_SUBTEXT } from "@/lib/constants";
 import { createClient } from "@/lib/supabase/client";
 import { signInSchema } from "@/lib/validations";
 
@@ -58,95 +62,100 @@ export default function SignInPage() {
   }
 
   return (
-    <div className="portal-shell portal-auth-shell">
-      <div className="portal-ambient portal-ambient-a" aria-hidden />
-      <div className="portal-ambient portal-ambient-b" aria-hidden />
-
-      <div className="portal-auth-frame">
-        <div className="flex items-center justify-between gap-4">
-          <Logo className="text-slate-50" />
-          <div className="flex items-center gap-3">
-            <span className="portal-pill-note">Secure account access</span>
-            <Badge className="portal-chip">Consumer Access</Badge>
+    <div className="portal-shell flex min-h-screen items-center justify-center px-4 py-12">
+      <div className="w-full max-w-md space-y-8">
+        {/* Logo */}
+        <div className="text-center">
+          <div className="inline-block">
+            <Logo />
           </div>
         </div>
 
-        <div className="portal-auth-grid">
-          <Card className="portal-auth-aside">
-            <CardContent className="space-y-6 p-0">
-              <div className="space-y-4">
-                <p className="portal-kicker">Welcome Back</p>
-                <h1 className="portal-title">Continue where your credit story left off.</h1>
-                <p className="portal-copy max-w-xl text-base">{APP_SUBTEXT}</p>
+        {/* Main card */}
+        <Card className="onboard-card overflow-hidden border-slate-200 shadow-lg">
+          {/* Header band */}
+          <div className="onboard-header-band px-6 py-5 text-center">
+            <div className="mx-auto mb-3 flex size-10 items-center justify-center rounded-xl bg-white/90 shadow-sm">
+              <LogIn className="size-5 text-indigo-600" />
+            </div>
+            <h1 className="text-xl font-bold tracking-tight text-slate-900" style={{ fontFamily: "var(--cb-font-display)" }}>
+              Welcome back
+            </h1>
+            <p className="mt-1 text-sm text-slate-500">
+              Sign in to continue where your credit story left off.
+            </p>
+          </div>
+
+          <CardContent className="p-6">
+            <form className="space-y-5" onSubmit={handleSignIn}>
+              {/* Email */}
+              <div className="portal-field">
+                <Label htmlFor="email">Email address</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                {errors.email ? <p className="portal-inline-error">{errors.email}</p> : null}
               </div>
 
-              <div className="portal-auth-stack">
-                <span className="portal-chip">
-                  <ShieldCheck className="size-4" />
-                  Bank-grade session security
-                </span>
-                <span className="portal-chip">
-                  <Sparkles className="size-4" />
-                  Continuous score visibility
-                </span>
-              </div>
-
-              <div className="portal-hero-banner">
-                <p className="portal-kicker">What you can do here</p>
-                <div className="mt-4 grid gap-3">
-                  <div className="portal-pill-note">Review score updates and lender activity</div>
-                  <div className="portal-pill-note">Upload fresh documents into the same vault</div>
-                  <div className="portal-pill-note">Control how your translated profile is shared</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="portal-auth-main">
-            <CardHeader className="space-y-3 px-0">
-              <p className="portal-kicker">Sign In</p>
-              <CardTitle className="portal-subtitle">Access your CreditBridge account</CardTitle>
-            </CardHeader>
-            <CardContent className="px-0">
-              <form className="portal-form-grid" onSubmit={handleSignIn}>
-                <div className="portal-field">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={email}
-                    onChange={(event) => setEmail(event.target.value)}
-                    required
-                  />
-                  {errors.email ? <p className="portal-inline-error">{errors.email}</p> : null}
-                </div>
-
-                <div className="portal-field">
+              {/* Password */}
+              <div className="portal-field">
+                <div className="flex items-center justify-between">
                   <Label htmlFor="password">Password</Label>
-                  <Input
-                    id="password"
-                    type="password"
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                    required
-                  />
-                  {errors.password ? <p className="portal-inline-error">{errors.password}</p> : null}
+                  <Link href="/forgot-password" className="text-xs font-medium text-indigo-600 hover:text-indigo-700">
+                    Forgot password?
+                  </Link>
                 </div>
+                <Input
+                  id="password"
+                  type="password"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+                {errors.password ? <p className="portal-inline-error">{errors.password}</p> : null}
+              </div>
 
-                <Button type="submit" disabled={loading}>
-                  {loading ? "Signing in..." : "Sign in"}
-                  <ArrowRight data-icon="inline-end" />
-                </Button>
-              </form>
+              {/* Submit */}
+              <Button
+                type="submit"
+                className="landing-primary-btn h-11 w-full text-[0.9rem]"
+                disabled={loading}
+              >
+                {loading ? "Signing in..." : "Sign in"}
+                <ArrowRight className="ml-2 size-4" />
+              </Button>
+            </form>
 
-              <p className="mt-5 text-sm text-slate-200/85">
-                New to CreditBridge?{" "}
-                <Link href="/onboard" className="portal-ghost-link">
-                  Start onboarding
-                </Link>
-              </p>
-            </CardContent>
-          </Card>
+            <p className="mt-5 text-center text-sm text-slate-500">
+              New to CreditBridge?{" "}
+              <Link href="/onboard" className="font-medium text-indigo-600 hover:text-indigo-700">
+                Create an account
+              </Link>
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Trust indicators */}
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          {[
+            { icon: ShieldCheck, text: "Bank-grade security" },
+            { icon: Globe2, text: "5 countries" },
+            { icon: CheckCircle2, text: "No hard pull" },
+          ].map((item) => {
+            const Icon = item.icon;
+            return (
+              <span key={item.text} className="flex items-center gap-1.5 text-xs font-medium text-slate-400">
+                <Icon className="size-3.5" />
+                {item.text}
+              </span>
+            );
+          })}
         </div>
       </div>
     </div>

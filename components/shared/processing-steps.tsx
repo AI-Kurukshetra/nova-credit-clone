@@ -42,7 +42,7 @@ export function ProcessingSteps({ countryLabel }: ProcessingStepsProps): React.J
       <div className="space-y-4">
         <div className="flex items-center gap-3">
           <span className="landing-icon-badge">
-            <Orbit className="text-cyan-100" />
+            <Orbit className="text-indigo-500" />
           </span>
           <div>
             <p className="portal-kicker">Translation In Progress</p>
@@ -68,9 +68,9 @@ export function ProcessingSteps({ countryLabel }: ProcessingStepsProps): React.J
             >
               <span className="portal-processing-dot">
                 {complete ? (
-                  <CheckCircle2 className="text-emerald-300" />
+                  <CheckCircle2 className="text-emerald-600" />
                 ) : current ? (
-                  <LoaderCircle className="animate-spin text-cyan-200" />
+                  <LoaderCircle className="animate-spin text-indigo-500" />
                 ) : (
                   <span className="size-2 rounded-full bg-slate-400/50" />
                 )}

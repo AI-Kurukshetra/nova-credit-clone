@@ -24,13 +24,11 @@ export function LegalDocumentPage({
   return (
     <div className="landing-shell">
       <main className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 py-6 sm:px-6 sm:py-8">
-        <header className="landing-panel landing-reveal relative overflow-hidden p-6 sm:p-8">
-          <div className="landing-spotlight" aria-hidden />
-          <div className="landing-orb landing-orb-primary" aria-hidden />
-          <div className="landing-orb landing-orb-secondary" aria-hidden />
-          <div className="relative z-10 flex flex-col gap-6">
+        {/* ── Header ── */}
+        <header className="landing-reveal rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <Logo className="text-slate-50" />
+              <Logo />
               <div className="flex flex-wrap items-center gap-3">
                 <Button asChild variant="outline" className="landing-outline-btn">
                   <Link href="/">
@@ -38,49 +36,49 @@ export function LegalDocumentPage({
                     Back to Home
                   </Link>
                 </Button>
-                <Button asChild className="landing-cta-btn">
+                <Button asChild className="landing-primary-btn">
                   <Link href={siblingHref}>
                     {siblingLabel}
-                    <ArrowRight data-icon="inline-end" />
+                    <ArrowRight className="ml-1 size-4" />
                   </Link>
                 </Button>
               </div>
             </div>
 
             <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)] lg:items-start">
-              <div className="space-y-5">
-                <Badge className="landing-signal-badge w-fit">{document.label}</Badge>
+              <div className="space-y-4">
+                <Badge className="landing-section-badge w-fit">{document.label}</Badge>
                 <div className="space-y-3">
-                  <h1 className="landing-display max-w-4xl text-4xl text-white sm:text-6xl">
+                  <h1 className="landing-section-title max-w-4xl text-4xl sm:text-5xl">
                     {document.title}
                   </h1>
-                  <p className="landing-body-copy max-w-3xl text-base sm:text-lg">
+                  <p className="max-w-3xl text-base leading-relaxed text-slate-500 sm:text-lg">
                     {document.description}
                   </p>
                 </div>
-                <p className="landing-subtle-copy text-sm">
+                <p className="text-sm text-slate-400">
                   Last updated {document.lastUpdated}. This page contains placeholder
                   legal language for the current demo build.
                 </p>
               </div>
 
-              <Card className="landing-card border-cyan-200/20 bg-slate-950/35">
+              <Card className="border-slate-200 bg-slate-50">
                 <CardContent className="space-y-4 p-5">
                   <div className="flex items-center gap-3">
-                    <span className="landing-icon-badge">
-                      <ShieldCheck />
+                    <span className="landing-step-icon">
+                      <ShieldCheck className="size-5" />
                     </span>
                     <div>
-                      <p className="landing-eyebrow">Snapshot</p>
-                      <p className="text-base font-semibold text-slate-50">
+                      <p className="text-[0.7rem] font-bold tracking-[0.15em] text-indigo-500 uppercase">Snapshot</p>
+                      <p className="text-base font-semibold text-slate-800">
                         Key points at a glance
                       </p>
                     </div>
                   </div>
                   <div className="space-y-3">
                     {document.highlights.map((highlight) => (
-                      <p key={highlight} className="landing-list-check text-sm text-slate-50">
-                        <FileText className="text-cyan-200" />
+                      <p key={highlight} className="flex items-center gap-2.5 text-sm font-medium text-slate-700">
+                        <FileText className="size-4 shrink-0 text-indigo-400" />
                         {highlight}
                       </p>
                     ))}
@@ -91,21 +89,18 @@ export function LegalDocumentPage({
           </div>
         </header>
 
+        {/* ── Content ── */}
         <section className="grid gap-6 py-8 lg:grid-cols-[240px_minmax(0,1fr)]">
-          <aside
-            className="landing-panel landing-reveal h-fit p-5"
-            style={{ animationDelay: "80ms" }}
-          >
-            <p className="landing-eyebrow">On this page</p>
+          <aside className="landing-reveal h-fit rounded-xl border border-slate-200 bg-white p-5 shadow-sm" style={{ animationDelay: "80ms" }}>
+            <p className="text-[0.7rem] font-bold tracking-[0.15em] text-indigo-500 uppercase">On this page</p>
             <nav className="mt-4 space-y-3">
               {document.sections.map((section) => {
                 const anchorId = section.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-
                 return (
                   <Link
                     key={section.title}
                     href={`#${anchorId}`}
-                    className="landing-header-link block"
+                    className="landing-footer-link block text-sm"
                   >
                     {section.title}
                   </Link>
@@ -117,25 +112,24 @@ export function LegalDocumentPage({
           <div className="space-y-5">
             {document.sections.map((section, index) => {
               const anchorId = section.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-
               return (
                 <Card
                   key={section.title}
                   id={anchorId}
-                  className="landing-card landing-reveal border-white/10 bg-slate-950/28"
+                  className="landing-reveal border-slate-200 bg-white shadow-sm"
                   style={{ animationDelay: `${index * 70 + 120}ms` }}
                 >
                   <CardContent className="space-y-4 p-6 sm:p-7">
                     <div className="space-y-2">
-                      <p className="landing-eyebrow">{document.label}</p>
-                      <h2 className="landing-display text-3xl text-white sm:text-4xl">
+                      <p className="text-[0.7rem] font-bold tracking-[0.15em] text-indigo-500 uppercase">{document.label}</p>
+                      <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl" style={{ fontFamily: "var(--cb-font-display)" }}>
                         {section.title}
                       </h2>
                     </div>
-                    <Separator className="bg-white/10" />
+                    <Separator className="bg-slate-200" />
                     <div className="space-y-4">
                       {section.paragraphs.map((paragraph) => (
-                        <p key={paragraph} className="landing-body-copy text-sm sm:text-base">
+                        <p key={paragraph} className="text-sm leading-relaxed text-slate-600 sm:text-base">
                           {paragraph}
                         </p>
                       ))}
@@ -143,8 +137,8 @@ export function LegalDocumentPage({
                     {section.bullets ? (
                       <div className="grid gap-3 pt-1">
                         {section.bullets.map((bullet) => (
-                          <p key={bullet} className="landing-list-check text-sm text-slate-50">
-                            <ShieldCheck className="text-emerald-300" />
+                          <p key={bullet} className="flex items-center gap-2.5 text-sm font-medium text-slate-700">
+                            <ShieldCheck className="size-4 shrink-0 text-emerald-500" />
                             {bullet}
                           </p>
                         ))}

@@ -54,7 +54,7 @@ export default function LenderSearchPage() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="relative">
-            <Search className="absolute left-3 top-3 text-slate-300/70" />
+            <Search className="absolute left-3 top-3 text-slate-500" />
             <Input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
@@ -80,7 +80,7 @@ export default function LenderSearchPage() {
                   results.map((consumer, index) => (
                     <TableRow
                       key={consumer.id}
-                      className={index % 2 === 0 ? "bg-white/3" : undefined}
+                      className={index % 2 === 0 ? "bg-slate-50" : undefined}
                     >
                       <TableCell>{maskConsumerName(consumer.fullName)}</TableCell>
                       <TableCell>{consumer.profile.homeCountryCode}</TableCell>
@@ -106,7 +106,7 @@ export default function LenderSearchPage() {
                   ))
                 ) : (
                   <TableRow>
-                    <TableCell colSpan={6} className="text-center text-sm text-slate-300/75">
+                    <TableCell colSpan={6} className="text-center text-sm text-slate-500">
                       Search for a consumer to view results.
                     </TableCell>
                   </TableRow>

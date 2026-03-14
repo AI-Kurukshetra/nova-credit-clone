@@ -45,7 +45,7 @@ export default function ConsumerApplicationsPage() {
           </div>
           <div className="portal-page-actions">
             <div className="portal-pill-note">
-              <Briefcase className="size-4 text-cyan-200" />
+              <Briefcase className="size-4 text-indigo-500" />
               {applications.length} active application{applications.length !== 1 ? "s" : ""}
             </div>
           </div>
@@ -68,23 +68,23 @@ export default function ConsumerApplicationsPage() {
             {applications.map((application, index) => (
               <TableRow
                 key={application.id}
-                className={index % 2 === 0 ? "bg-white/3" : undefined}
+                className={index % 2 === 0 ? "bg-slate-50" : undefined}
               >
                 <TableCell className="font-medium">{application.lenderName}</TableCell>
                 <TableCell>
                   <ApplicationStatusBadge status={application.status} />
                 </TableCell>
-                <TableCell className="text-slate-300/80">{formatDate(application.submittedAt)}</TableCell>
-                <TableCell className="text-slate-300/80">
+                <TableCell className="text-slate-600">{formatDate(application.submittedAt)}</TableCell>
+                <TableCell className="text-slate-600">
                   {application.decisionAt ? formatDate(application.decisionAt) : (
-                    <span className="text-xs italic text-slate-400/60">Pending</span>
+                    <span className="text-xs italic text-slate-500">Pending</span>
                   )}
                 </TableCell>
                 <TableCell>
                   {application.lenderNotes ? (
-                    <span className="text-xs text-slate-300/70">{application.lenderNotes}</span>
+                    <span className="text-xs text-slate-500">{application.lenderNotes}</span>
                   ) : (
-                    <span className="text-xs italic text-slate-400/50">No notes</span>
+                    <span className="text-xs italic text-slate-500">No notes</span>
                   )}
                 </TableCell>
                 <TableCell className="text-right">

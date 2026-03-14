@@ -115,7 +115,7 @@ export default function LenderApiKeysPage() {
   }
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[1.2fr_1fr]">
+    <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-[1.2fr_1fr]">
       <section className="portal-page-intro xl:col-span-2">
         <div className="portal-page-intro-row">
           <div className="space-y-3">
@@ -157,9 +157,9 @@ export default function LenderApiKeysPage() {
                 </div>
 
                 {newApiKey ? (
-                  <div className="rounded-lg border bg-slate-950 p-3 font-mono text-xs text-slate-100">
+                  <div className="rounded-lg border bg-slate-50 p-3 font-mono text-xs text-slate-800">
                     <p className="break-all">{newApiKey}</p>
-                    <p className="mt-1 text-amber-300">Save this key. It is shown only once.</p>
+                    <p className="mt-1 text-amber-600">Save this key. It is shown only once.</p>
                   </div>
                 ) : null}
               </div>
@@ -192,7 +192,7 @@ export default function LenderApiKeysPage() {
             </TableHeader>
             <TableBody>
               {keys.map((key, index) => (
-                <TableRow key={key.id} className={index % 2 === 0 ? "bg-white/3" : undefined}>
+                <TableRow key={key.id} className={index % 2 === 0 ? "bg-slate-50" : undefined}>
                   <TableCell>{key.label}</TableCell>
                   <TableCell className="font-mono">{key.keyPrefix}</TableCell>
                   <TableCell>{formatDate(key.createdAt)}</TableCell>
@@ -227,17 +227,17 @@ export default function LenderApiKeysPage() {
         <CardContent className="space-y-4">
           <div>
             <p className="mb-2 text-sm font-medium">curl</p>
-            <pre className="overflow-x-auto rounded-lg border bg-slate-950 p-3 text-xs text-slate-100">
+            <pre className="overflow-x-auto rounded-lg border bg-slate-50 p-3 text-xs text-slate-800">
 {examples.curl}
             </pre>
           </div>
           <div>
             <p className="mb-2 text-sm font-medium">JavaScript</p>
-            <pre className="overflow-x-auto rounded-lg border bg-slate-950 p-3 text-xs text-slate-100">
+            <pre className="overflow-x-auto rounded-lg border bg-slate-50 p-3 text-xs text-slate-800">
 {examples.js}
             </pre>
           </div>
-          <p className="flex items-center gap-2 text-xs text-slate-300/75">
+          <p className="flex items-center gap-2 text-xs text-slate-500">
             <KeyRound className="text-primary" />
             Full keys are never shown again after creation.
           </p>

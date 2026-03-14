@@ -51,8 +51,6 @@ export default function LenderDashboardLayout({
 }) {
   return (
     <div className="portal-shell portal-dashboard-host">
-      <div className="portal-ambient portal-ambient-a" aria-hidden />
-      <div className="portal-ambient portal-ambient-b" aria-hidden />
       <DashboardShell
         title="Lender Dashboard"
         userInitials="CF"

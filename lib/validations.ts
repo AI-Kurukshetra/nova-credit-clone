@@ -10,22 +10,18 @@ const passwordSchema = z
 
 const cleanTextSchema = z.string().trim().max(500);
 
-export const signUpSchema = z
-  .object({
-    email: z.string().email(),
-    password: passwordSchema,
-    confirmPassword: z.string(),
-    consentDataProcessing: z.boolean().refine((value) => value, {
-      message: "Data processing consent is required.",
-    }),
-    consentTerms: z.boolean().refine((value) => value, {
-      message: "Terms acceptance is required.",
-    }),
-  })
-  .refine((value) => value.password === value.confirmPassword, {
-    path: ["confirmPassword"],
-    message: "Passwords do not match.",
-  });
+export const signUpSchema = z.object({
+  firstName: z.string().trim().min(1, "First name is required."),
+  lastName: z.string().trim().min(1, "Last name is required."),
+  email: z.string().email(),
+  password: passwordSchema,
+  consentDataProcessing: z.boolean().refine((value) => value, {
+    message: "Data processing consent is required.",
+  }),
+  consentTerms: z.boolean().refine((value) => value, {
+    message: "Terms acceptance is required.",
+  }),
+});
 
 export const signInSchema = z.object({
   email: z.string().trim().email("Enter a valid email address."),
@@ -109,7 +105,8 @@ export const searchConsumerSchema = z.object({
 });
 
 export const profileUpdateSchema = z.object({
-  full_name: z.string().trim().min(1).max(200),
+  first_name: z.string().trim().min(1, "First name is required."),
+  last_name: z.string().trim().min(1, "Last name is required."),
   email: z.string().email(),
 });
 

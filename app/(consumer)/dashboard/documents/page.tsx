@@ -1,11 +1,29 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState } from "react";
 
 import { Eye, FileText, FileUp } from "lucide-react";
 import { toast } from "sonner";
 
-import { DocumentUploadZone } from "@/components/shared/document-upload-zone";
+import { Skeleton } from "@/components/ui/skeleton";
+
+const DocumentUploadZone = dynamic(() => import("@/components/shared/document-upload-zone").then((m) => m.DocumentUploadZone), {
+  loading: () => (
+    <div className="grid gap-4">
+      {[1, 2, 3].map((i) => (
+        <div key={i} className="flex items-center justify-between rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-4">
+          <div className="space-y-1.5">
+            <Skeleton className="h-4 w-36 rounded bg-slate-100" />
+            <Skeleton className="h-3 w-48 rounded bg-slate-100" />
+          </div>
+          <Skeleton className="h-9 w-20 rounded-lg bg-slate-100" />
+        </div>
+      ))}
+    </div>
+  ),
+  ssr: false,
+});
 import { EmptyState } from "@/components/shared/empty-state";
 import { DocumentStatusBadge } from "@/components/shared/status-badge";
 import { Button } from "@/components/ui/button";
@@ -105,7 +123,7 @@ export default function ConsumerDocumentsPage() {
           </div>
           <div className="portal-page-actions">
             <div className="portal-pill-note">
-              <FileUp className="size-4 text-cyan-200" />
+              <FileUp className="size-4 text-indigo-500" />
               Accepted: PDF, JPG, PNG
             </div>
           </div>
@@ -164,11 +182,11 @@ export default function ConsumerDocumentsPage() {
           </TableHeader>
           <TableBody>
             {documents.map((document, index) => (
-              <TableRow key={document.id} className={index % 2 === 0 ? "bg-white/3" : ""}>
+              <TableRow key={document.id} className={index % 2 === 0 ? "bg-slate-50" : ""}>
                 <TableCell>
                   <div className="flex items-center gap-3">
-                    <div className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-cyan-300/20 bg-cyan-400/8">
-                      <FileText className="size-4 text-cyan-300/70" />
+                    <div className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-indigo-200 bg-indigo-50">
+                      <FileText className="size-4 text-indigo-500" />
                     </div>
                     <span className="font-medium">{document.name}</span>
                   </div>
@@ -179,7 +197,7 @@ export default function ConsumerDocumentsPage() {
                 <TableCell>
                   <DocumentStatusBadge status={document.status as DocumentStatus} />
                 </TableCell>
-                <TableCell className="text-slate-300/80">{formatDate(document.uploaded_at)}</TableCell>
+                <TableCell className="text-slate-600">{formatDate(document.uploaded_at)}</TableCell>
                 <TableCell className="text-right">
                   <Button size="sm" variant="outline">
                     <Eye className="size-3.5" />

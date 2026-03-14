@@ -152,7 +152,7 @@ export default function LenderWebhooksPage() {
             </TableHeader>
             <TableBody>
               {events.map((event, index) => (
-                <TableRow key={event.id} className={index % 2 === 0 ? "bg-white/3" : undefined}>
+                <TableRow key={event.id} className={index % 2 === 0 ? "bg-slate-50" : undefined}>
                   <TableCell>{event.eventType}</TableCell>
                   <TableCell className="font-mono text-xs">{event.payloadPreview}</TableCell>
                   <TableCell>
