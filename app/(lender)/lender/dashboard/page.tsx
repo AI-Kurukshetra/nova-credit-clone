@@ -18,7 +18,6 @@ const ApiUsageChart = dynamic(() => import("@/components/shared/api-usage-chart"
       ))}
     </div>
   ),
-  ssr: false,
 });
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
