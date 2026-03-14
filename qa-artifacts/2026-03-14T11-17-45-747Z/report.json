@@ -1,0 +1,994 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "startedAt": "2026-03-14T11:17:45.747Z",
+  "finishedAt": "2026-03-14T11:21:03.130Z",
+  "discoveredRoutes": [
+    "/",
+    "/dashboard",
+    "/dashboard/applications",
+    "/dashboard/documents",
+    "/dashboard/report",
+    "/dashboard/settings",
+    "/lender/dashboard",
+    "/lender/dashboard/api-keys",
+    "/lender/dashboard/applications",
+    "/lender/dashboard/applications?applicationId=cccccccc-cccc-4ccc-8ccc-ccccccccccc1",
+    "/lender/dashboard/search",
+    "/lender/dashboard/settings",
+    "/lender/dashboard/webhooks",
+    "/lender/onboard",
+    "/login",
+    "/onboard",
+    "/privacy",
+    "/signin",
+    "/signup",
+    "/terms"
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/",
+      "navigationError": null
+    },
+    {
+      "route": "/dashboard",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/dashboard",
+      "navigationError": null
+    },
+    {
+      "route": "/dashboard/report",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/dashboard/report",
+      "navigationError": null
+    },
+    {
+      "route": "/dashboard/documents",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/dashboard/documents",
+      "navigationError": null
+    },
+    {
+      "route": "/dashboard/applications",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/dashboard/applications",
+      "navigationError": null
+    },
+    {
+      "route": "/dashboard/settings",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/dashboard/settings",
+      "navigationError": null
+    },
+    {
+      "route": "/lender/dashboard",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/lender/dashboard",
+      "navigationError": null
+    },
+    {
+      "route": "/lender/dashboard/applications",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/lender/dashboard/applications",
+      "navigationError": null
+    },
+    {
+      "route": "/lender/dashboard/search",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/lender/dashboard/search",
+      "navigationError": null
+    },
+    {
+      "route": "/lender/dashboard/api-keys",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/lender/dashboard/api-keys",
+      "navigationError": null
+    },
+    {
+      "route": "/lender/dashboard/webhooks",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/lender/dashboard/webhooks",
+      "navigationError": null
+    },
+    {
+      "route": "/lender/dashboard/settings",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/lender/dashboard/settings",
+      "navigationError": null
+    },
+    {
+      "route": "/lender/onboard",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/lender/onboard",
+      "navigationError": null
+    },
+    {
+      "route": "/onboard",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/onboard",
+      "navigationError": null
+    },
+    {
+      "route": "/privacy",
+      "status": 200,
+      "title": "Privacy Policy | CreditBridge",
+      "finalUrl": "http://localhost:3000/privacy",
+      "navigationError": null
+    },
+    {
+      "route": "/terms",
+      "status": 200,
+      "title": "Terms of Service | CreditBridge",
+      "finalUrl": "http://localhost:3000/terms",
+      "navigationError": null
+    },
+    {
+      "route": "/signin",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/signin",
+      "navigationError": null
+    },
+    {
+      "route": "/lender/dashboard/applications?applicationId=cccccccc-cccc-4ccc-8ccc-ccccccccccc1",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/lender/dashboard/applications?applicationId=cccccccc-cccc-4ccc-8ccc-ccccccccccc1",
+      "navigationError": null
+    },
+    {
+      "route": "/login",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/signin",
+      "navigationError": null
+    },
+    {
+      "route": "/signup",
+      "status": 200,
+      "title": "CreditBridge",
+      "finalUrl": "http://localhost:3000/onboard",
+      "navigationError": null
+    }
+  ],
+  "flows": [
+    {
+      "name": "Public Landing and Navigation",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Consumer Onboarding",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Consumer Dashboard Flows",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Lender Onboarding",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "name": "Lender Dashboard Flows",
+      "status": "failed",
+      "details": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.portal-field:has(label:has-text(\"Status\"))').first().getByRole('combobox')\u001b[22m\n"
+    },
+    {
+      "name": "Static and Reachable Routes Sweep",
+      "status": "passed",
+      "details": "routes_visited=20"
+    },
+    {
+      "name": "Mobile Layout Spot Checks",
+      "status": "passed",
+      "details": ""
+    }
+  ],
+  "interactions": [
+    {
+      "flow": "Public Landing and Navigation",
+      "action": "Anchor jump: How it works",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Public Landing and Navigation",
+      "action": "Anchor jump: Countries",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Public Landing and Navigation",
+      "action": "Anchor jump: Lenders",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Public Landing and Navigation",
+      "action": "CTA to onboarding",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Consumer Onboarding",
+      "action": "Step1 continue disabled before consent",
+      "status": "passed",
+      "details": "disabled=true"
+    },
+    {
+      "flow": "Consumer Onboarding",
+      "action": "Step1 invalid data validation",
+      "status": "passed",
+      "details": "Invalid email address | Password must include a number | Passwords do not match."
+    },
+    {
+      "flow": "Consumer Onboarding",
+      "action": "Step1 to Step2 transition",
+      "status": "failed",
+      "details": ""
+    },
+    {
+      "flow": "Consumer Onboarding",
+      "action": "Step2 empty validation",
+      "status": "passed",
+      "details": "Too small: expected string to have >=1 characters | Too small: expected string to have >=1 characters | Too small: expected string to have >=2 characters | Too small: expected string to have >=2 characters"
+    },
+    {
+      "flow": "Consumer Onboarding",
+      "action": "Upload invalid file type",
+      "status": "passed",
+      "details": "Unsupported file type. Allowed: PDF, JPG, PNG."
+    },
+    {
+      "flow": "Consumer Onboarding",
+      "action": "Upload valid required files",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Consumer Onboarding",
+      "action": "Processing redirect to dashboard",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Consumer Dashboard Flows",
+      "action": "Share dialog open/copy/share",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Consumer Dashboard Flows",
+      "action": "Download report action",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Consumer Dashboard Flows",
+      "action": "Documents upload modal",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Consumer Dashboard Flows",
+      "action": "Settings invalid profile validation",
+      "status": "failed",
+      "details": ""
+    },
+    {
+      "flow": "Consumer Dashboard Flows",
+      "action": "Settings save with valid profile",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Consumer Dashboard Flows",
+      "action": "Settings privacy actions",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Consumer Dashboard Flows",
+      "action": "Topbar sign out navigation",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Lender Onboarding",
+      "action": "Step1 required company name validation",
+      "status": "passed",
+      "details": "Company name is required."
+    },
+    {
+      "flow": "Lender Onboarding",
+      "action": "Step2 use case required validation",
+      "status": "passed",
+      "details": "Select at least one use case."
+    },
+    {
+      "flow": "Lender Onboarding",
+      "action": "API key generation step",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Lender Onboarding",
+      "action": "Navigate to lender dashboard",
+      "status": "passed",
+      "details": ""
+    },
+    {
+      "flow": "Lender Dashboard Flows",
+      "action": "Overview tabs switch",
+      "status": "passed",
+      "details": ""
+    }
+  ],
+  "uiIssues": [
+    {
+      "route": "/",
+      "issue": "Small clickable targets",
+      "details": "count=7"
+    },
+    {
+      "route": "/dashboard",
+      "issue": "Small clickable targets",
+      "details": "count=2"
+    },
+    {
+      "route": "/lender/dashboard",
+      "issue": "Small clickable targets",
+      "details": "count=2"
+    },
+    {
+      "route": "/privacy",
+      "issue": "Small clickable targets",
+      "details": "count=5"
+    },
+    {
+      "route": "/terms",
+      "issue": "Small clickable targets",
+      "details": "count=4"
+    },
+    {
+      "route": "/signin",
+      "issue": "Small clickable targets",
+      "details": "count=1"
+    },
+    {
+      "route": "/login",
+      "issue": "Small clickable targets",
+      "details": "count=1"
+    },
+    {
+      "route": "/ (mobile)",
+      "issue": "Small clickable targets",
+      "details": "count=4"
+    },
+    {
+      "route": "/dashboard (mobile)",
+      "issue": "Potential clipped elements",
+      "details": "count=4"
+    },
+    {
+      "route": "/dashboard (mobile)",
+      "issue": "Small clickable targets",
+      "details": "count=2"
+    }
+  ],
+  "consoleLogs": [
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Consumer D...\" userInitials=\"PS\" navItems={[...]} mobileMode=\"bottom-nav\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«rj»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n        ...\n",
+      "page": "http://localhost:3000/onboard",
+      "context": "Consumer Onboarding"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/onboard",
+      "context": "Consumer Onboarding"
+    },
+    {
+      "type": "error",
+      "text": "React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. asChild aschild",
+      "page": "http://localhost:3000/dashboard",
+      "context": "Consumer Onboarding"
+    },
+    {
+      "type": "warning",
+      "text": "The width(-1) and height(-1) of chart should be greater than 0,\n       please check the style of container, or the props width(100%) and height(100%),\n       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the\n       height and width.",
+      "page": "http://localhost:3000/dashboard",
+      "context": "Consumer Onboarding"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Consumer D...\" userInitials=\"PS\" navItems={[...]} mobileMode=\"bottom-nav\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«Rej7ndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n        ...\n",
+      "page": "http://localhost:3000/dashboard",
+      "context": "visit:/dashboard"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/dashboard",
+      "context": "visit:/dashboard"
+    },
+    {
+      "type": "error",
+      "text": "React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. asChild aschild",
+      "page": "http://localhost:3000/dashboard",
+      "context": "visit:/dashboard"
+    },
+    {
+      "type": "warning",
+      "text": "The width(-1) and height(-1) of chart should be greater than 0,\n       please check the style of container, or the props width(100%) and height(100%),\n       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the\n       height and width.",
+      "page": "http://localhost:3000/dashboard",
+      "context": "visit:/dashboard"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Consumer D...\" userInitials=\"PS\" navItems={[...]} mobileMode=\"bottom-nav\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«Rej7ndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n        ...\n",
+      "page": "http://localhost:3000/dashboard/report",
+      "context": "visit:/dashboard/report"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/dashboard/report",
+      "context": "visit:/dashboard/report"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Consumer D...\" userInitials=\"PS\" navItems={[...]} mobileMode=\"bottom-nav\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«Rej7ndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n        ...\n",
+      "page": "http://localhost:3000/dashboard/documents",
+      "context": "visit:/dashboard/documents"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/dashboard/documents",
+      "context": "visit:/dashboard/documents"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Consumer D...\" userInitials=\"PS\" navItems={[...]} mobileMode=\"bottom-nav\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«Rej7ndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n        ...\n",
+      "page": "http://localhost:3000/dashboard/applications",
+      "context": "visit:/dashboard/applications"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/dashboard/applications",
+      "context": "visit:/dashboard/applications"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Consumer D...\" userInitials=\"PS\" navItems={[...]} mobileMode=\"bottom-nav\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«Rej7ndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n        ...\n",
+      "page": "http://localhost:3000/dashboard/settings",
+      "context": "visit:/dashboard/settings"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/dashboard/settings",
+      "context": "visit:/dashboard/settings"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Consumer D...\" userInitials=\"PS\" navItems={[...]} mobileMode=\"bottom-nav\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«Rej7ndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n        ...\n",
+      "page": "http://localhost:3000/dashboard/documents",
+      "context": "visit:/dashboard/settings"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/dashboard/documents",
+      "context": "visit:/dashboard/settings"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Consumer D...\" userInitials=\"PS\" navItems={[...]} mobileMode=\"bottom-nav\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«Rej7ndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n        ...\n",
+      "page": "http://localhost:3000/dashboard",
+      "context": "visit:/dashboard/settings"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/dashboard",
+      "context": "visit:/dashboard/settings"
+    },
+    {
+      "type": "error",
+      "text": "React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. asChild aschild",
+      "page": "http://localhost:3000/dashboard",
+      "context": "visit:/dashboard/settings"
+    },
+    {
+      "type": "warning",
+      "text": "The width(-1) and height(-1) of chart should be greater than 0,\n       please check the style of container, or the props width(100%) and height(100%),\n       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the\n       height and width.",
+      "page": "http://localhost:3000/dashboard",
+      "context": "visit:/dashboard/settings"
+    },
+    {
+      "type": "error",
+      "text": "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <ClientPageRoot Component={function LenderOnboardPage} searchParams={{}} params={{}}>\n      <LenderOnboardPage params={Promise} searchParams={Promise}>\n        <div className=\"portal-she...\">\n          <div>\n          <div>\n          <div className=\"portal-aut...\">\n            <div>\n            <div className=\"portal-aut...\">\n              <Card>\n              <Card className=\"portal-aut...\">\n                <div data-slot=\"card\" data-size=\"default\" className={\"group/ca...\"}>\n                  <CardHeader>\n                  <CardContent className=\"space-y-4 ...\">\n                    <div data-slot=\"card-content\" className=\"group-data...\">\n                      <div className=\"portal-for...\">\n                        <div className=\"portal-field\">\n                          <Label>\n                          <Input id=\"company-name\" value=\"\" onChange={function onChange}>\n                            <Input type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" id=\"company-name\" ...>\n                              <FieldControl ref={null} type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                <input\n                                  id=\"company-name\"\n                                  disabled={false}\n                                  name={undefined}\n                                  ref={function}\n                                  aria-labelledby={undefined}\n                                  autoFocus={false}\n                                  value=\"\"\n                                  onChange={function}\n                                  onFocus={function onFocus}\n                                  onBlur={function onBlur}\n                                  onKeyDown={function onKeyDown}\n                                  type={undefined}\n                                  data-slot=\"input\"\n                                  className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 p...\"\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                        <div className=\"grid gap-4...\">\n                          <div className=\"portal-field\">\n                            <Label>\n                            <Input id=\"license-nu...\" value=\"\" onChange={function onChange}>\n                              <Input type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" id=\"license-nu...\" ...>\n                                <FieldControl ref={null} type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                  <input\n                                    id=\"license-number\"\n                                    disabled={false}\n                                    name={undefined}\n                                    ref={function}\n                                    aria-labelledby={undefined}\n                                    autoFocus={false}\n                                    value=\"\"\n                                    onChange={function}\n                                    onFocus={function onFocus}\n                                    onBlur={function onBlur}\n                                    onKeyDown={function onKeyDown}\n                                    type={undefined}\n                                    data-slot=\"input\"\n                                    className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5...\"\n-                                   style={{caret-color:\"transparent\"}}\n                                  >\n                          <div className=\"portal-field\">\n                            <Label>\n                            <Input id=\"state\" value=\"\" onChange={function onChange}>\n                              <Input type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" id=\"state\" value=\"\" ...>\n                                <FieldControl ref={null} type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                  <input\n                                    id=\"state\"\n                                    disabled={false}\n                                    name={undefined}\n                                    ref={function}\n                                    aria-labelledby={undefined}\n                                    autoFocus={false}\n                                    value=\"\"\n                                    onChange={function}\n                                    onFocus={function onFocus}\n                                    onBlur={function onBlur}\n                                    onKeyDown={function onKeyDown}\n                                    type={undefined}\n                                    data-slot=\"input\"\n                                    className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5...\"\n-                                   style={{caret-color:\"transparent\"}}\n                                  >\n                        <div className=\"portal-field\">\n                          <Label>\n                          <SelectRoot value=\"Community ...\" onValueChange={function onValueChange}>\n                            <SelectTrigger>\n                            <SelectContent>\n                            <input\n                              onFocus={function onFocus}\n                              onChange={function onChange}\n                              id=\"base-ui-«Rj6ljrndl7»-hidden-input\"\n                              name={undefined}\n                              autoComplete={undefined}\n                              value=\"Community Bank\"\n                              disabled={false}\n                              required={false}\n                              readOnly={false}\n                              ref={function}\n                              style={{\n+                               clipPath: \"inset(50%)\"\n+                               overflow: \"hidden\"\n+                               whiteSpace: \"nowrap\"\n+                               border: 0\n+                               padding: 0\n+                               width: 1\n-                               width: \"1px\"\n+                               height: 1\n-                               height: \"1px\"\n+                               margin: -1\n+                               position: \"fixed\"\n-                               position: \"fixed\"\n+                               top: 0\n-                               top: \"0px\"\n+                               left: 0\n-                               left: \"0px\"\n-                               clip-path: \"inset(50%)\"\n-                               overflow-x: \"hidden\"\n-                               overflow-y: \"hidden\"\n-                               white-space-collapse: \"collapse\"\n-                               text-wrap-mode: \"nowrap\"\n-                               border-top-width: \"0px\"\n-                               border-right-width: \"0px\"\n-                               border-bottom-width: \"0px\"\n-                               border-left-width: \"0px\"\n-                               border-top-style: \"initial\"\n-                               border-right-style: \"initial\"\n-                               border-bottom-style: \"initial\"\n-                               border-left-style: \"initial\"\n-                               border-top-color: \"initial\"\n-                               border-right-color: \"initial\"\n-                               border-bottom-color: \"initial\"\n-                               border-left-color: \"initial\"\n-                               border-image-source: \"initial\"\n-                               border-image-slice: \"initial\"\n-                               border-image-width: \"initial\"\n-                               border-image-outset: \"initial\"\n-                               border-image-repeat: \"initial\"\n-                               padding-top: \"0px\"\n-                               padding-right: \"0px\"\n-                               padding-bottom: \"0px\"\n-                               padding-left: \"0px\"\n-                               margin-top: \"-1px\"\n-                               margin-right: \"-1px\"\n-                               margin-bottom: \"-1px\"\n-                               margin-left: \"-1px\"\n-                               caret-color: \"transparent\"\n                              }}\n                              tabIndex={-1}\n                              aria-hidden={true}\n                            >\n                        ...\n    ...\n",
+      "page": "http://localhost:3000/lender/onboard",
+      "context": "Lender Onboarding"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Lender Das...\" userInitials=\"CF\" navItems={[...]} mobileMode=\"drawer\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«rp»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n",
+      "page": "http://localhost:3000/lender/onboard",
+      "context": "Lender Onboarding"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/lender/onboard",
+      "context": "Lender Onboarding"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Lender Das...\" userInitials=\"CF\" navItems={[...]} mobileMode=\"drawer\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«R79jrndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n",
+      "page": "http://localhost:3000/lender/dashboard",
+      "context": "visit:/lender/dashboard"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/lender/dashboard",
+      "context": "visit:/lender/dashboard"
+    },
+    {
+      "type": "warning",
+      "text": "The width(-1) and height(-1) of chart should be greater than 0,\n       please check the style of container, or the props width(100%) and height(100%),\n       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the\n       height and width.",
+      "page": "http://localhost:3000/lender/dashboard",
+      "context": "visit:/lender/dashboard"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Lender Das...\" userInitials=\"CF\" navItems={[...]} mobileMode=\"drawer\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«R79jrndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n",
+      "page": "http://localhost:3000/lender/dashboard/applications",
+      "context": "visit:/lender/dashboard/applications"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/lender/dashboard/applications",
+      "context": "visit:/lender/dashboard/applications"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Lender Das...\" userInitials=\"CF\" navItems={[...]} mobileMode=\"drawer\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«R79jrndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n",
+      "page": "http://localhost:3000/lender/dashboard/search",
+      "context": "visit:/lender/dashboard/search"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/lender/dashboard/search",
+      "context": "visit:/lender/dashboard/search"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Lender Das...\" userInitials=\"CF\" navItems={[...]} mobileMode=\"drawer\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«R79jrndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n",
+      "page": "http://localhost:3000/lender/dashboard/api-keys",
+      "context": "visit:/lender/dashboard/webhooks"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/lender/dashboard/api-keys",
+      "context": "visit:/lender/dashboard/webhooks"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Lender Das...\" userInitials=\"CF\" navItems={[...]} mobileMode=\"drawer\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«R79jrndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n",
+      "page": "http://localhost:3000/lender/dashboard/webhooks",
+      "context": "visit:/lender/dashboard/webhooks"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/lender/dashboard/webhooks",
+      "context": "visit:/lender/dashboard/webhooks"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Lender Das...\" userInitials=\"CF\" navItems={[...]} mobileMode=\"drawer\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«R79jrndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n",
+      "page": "http://localhost:3000/lender/dashboard/settings",
+      "context": "visit:/lender/dashboard/settings"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/lender/dashboard/settings",
+      "context": "visit:/lender/dashboard/settings"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Lender Das...\" userInitials=\"CF\" navItems={[...]} mobileMode=\"drawer\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«R79jrndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n",
+      "page": "http://localhost:3000/lender/dashboard/applications",
+      "context": "visit:/lender/dashboard/settings"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/lender/dashboard/applications",
+      "context": "visit:/lender/dashboard/settings"
+    },
+    {
+      "type": "error",
+      "text": "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <ClientPageRoot Component={function LenderOnboardPage} searchParams={{}} params={{}}>\n      <LenderOnboardPage params={Promise} searchParams={Promise}>\n        <div className=\"portal-she...\">\n          <div>\n          <div>\n          <div className=\"portal-aut...\">\n            <div>\n            <div className=\"portal-aut...\">\n              <Card>\n              <Card className=\"portal-aut...\">\n                <div data-slot=\"card\" data-size=\"default\" className={\"group/ca...\"}>\n                  <CardHeader>\n                  <CardContent className=\"space-y-4 ...\">\n                    <div data-slot=\"card-content\" className=\"group-data...\">\n                      <div className=\"portal-for...\">\n                        <div className=\"portal-field\">\n                          <Label>\n                          <Input id=\"company-name\" value=\"\" onChange={function onChange}>\n                            <Input type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" id=\"company-name\" ...>\n                              <FieldControl ref={null} type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                <input\n                                  id=\"company-name\"\n                                  disabled={false}\n                                  name={undefined}\n                                  ref={function}\n                                  aria-labelledby={undefined}\n                                  autoFocus={false}\n                                  value=\"\"\n                                  onChange={function}\n                                  onFocus={function onFocus}\n                                  onBlur={function onBlur}\n                                  onKeyDown={function onKeyDown}\n                                  type={undefined}\n                                  data-slot=\"input\"\n                                  className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 p...\"\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                        <div className=\"grid gap-4...\">\n                          <div className=\"portal-field\">\n                            <Label>\n                            <Input id=\"license-nu...\" value=\"\" onChange={function onChange}>\n                              <Input type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" id=\"license-nu...\" ...>\n                                <FieldControl ref={null} type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                  <input\n                                    id=\"license-number\"\n                                    disabled={false}\n                                    name={undefined}\n                                    ref={function}\n                                    aria-labelledby={undefined}\n                                    autoFocus={false}\n                                    value=\"\"\n                                    onChange={function}\n                                    onFocus={function onFocus}\n                                    onBlur={function onBlur}\n                                    onKeyDown={function onKeyDown}\n                                    type={undefined}\n                                    data-slot=\"input\"\n                                    className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5...\"\n-                                   style={{caret-color:\"transparent\"}}\n                                  >\n                          <div className=\"portal-field\">\n                            <Label>\n                            <Input id=\"state\" value=\"\" onChange={function onChange}>\n                              <Input type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" id=\"state\" value=\"\" ...>\n                                <FieldControl ref={null} type={undefined} data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                  <input\n                                    id=\"state\"\n                                    disabled={false}\n                                    name={undefined}\n                                    ref={function}\n                                    aria-labelledby={undefined}\n                                    autoFocus={false}\n                                    value=\"\"\n                                    onChange={function}\n                                    onFocus={function onFocus}\n                                    onBlur={function onBlur}\n                                    onKeyDown={function onKeyDown}\n                                    type={undefined}\n                                    data-slot=\"input\"\n                                    className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5...\"\n-                                   style={{caret-color:\"transparent\"}}\n                                  >\n                        <div className=\"portal-field\">\n                          <Label>\n                          <SelectRoot value=\"Community ...\" onValueChange={function onValueChange}>\n                            <SelectTrigger>\n                            <SelectContent>\n                            <input\n                              onFocus={function onFocus}\n                              onChange={function onChange}\n                              id=\"base-ui-«Rj6ljrndl7»-hidden-input\"\n                              name={undefined}\n                              autoComplete={undefined}\n                              value=\"Community Bank\"\n                              disabled={false}\n                              required={false}\n                              readOnly={false}\n                              ref={function}\n                              style={{\n+                               clipPath: \"inset(50%)\"\n+                               overflow: \"hidden\"\n+                               whiteSpace: \"nowrap\"\n+                               border: 0\n+                               padding: 0\n+                               width: 1\n-                               width: \"1px\"\n+                               height: 1\n-                               height: \"1px\"\n+                               margin: -1\n+                               position: \"fixed\"\n-                               position: \"fixed\"\n+                               top: 0\n-                               top: \"0px\"\n+                               left: 0\n-                               left: \"0px\"\n-                               clip-path: \"inset(50%)\"\n-                               overflow-x: \"hidden\"\n-                               overflow-y: \"hidden\"\n-                               white-space-collapse: \"collapse\"\n-                               text-wrap-mode: \"nowrap\"\n-                               border-top-width: \"0px\"\n-                               border-right-width: \"0px\"\n-                               border-bottom-width: \"0px\"\n-                               border-left-width: \"0px\"\n-                               border-top-style: \"initial\"\n-                               border-right-style: \"initial\"\n-                               border-bottom-style: \"initial\"\n-                               border-left-style: \"initial\"\n-                               border-top-color: \"initial\"\n-                               border-right-color: \"initial\"\n-                               border-bottom-color: \"initial\"\n-                               border-left-color: \"initial\"\n-                               border-image-source: \"initial\"\n-                               border-image-slice: \"initial\"\n-                               border-image-width: \"initial\"\n-                               border-image-outset: \"initial\"\n-                               border-image-repeat: \"initial\"\n-                               padding-top: \"0px\"\n-                               padding-right: \"0px\"\n-                               padding-bottom: \"0px\"\n-                               padding-left: \"0px\"\n-                               margin-top: \"-1px\"\n-                               margin-right: \"-1px\"\n-                               margin-bottom: \"-1px\"\n-                               margin-left: \"-1px\"\n-                               caret-color: \"transparent\"\n                              }}\n                              tabIndex={-1}\n                              aria-hidden={true}\n                            >\n                        ...\n    ...\n",
+      "page": "http://localhost:3000/lender/onboard",
+      "context": "visit:/lender/onboard"
+    },
+    {
+      "type": "error",
+      "text": "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <ClientPageRoot Component={function OnboardPage} searchParams={{}} params={{}}>\n      <OnboardPage params={Promise} searchParams={Promise}>\n        <div className=\"portal-she...\">\n          <div>\n          <div>\n          <div className=\"portal-aut...\">\n            <div>\n            <div className=\"portal-aut...\">\n              <Card>\n              <div className=\"space-y-6\">\n                <div>\n                <Card className=\"portal-aut...\">\n                  <div data-slot=\"card\" data-size=\"default\" className={\"group/ca...\"}>\n                    <CardHeader>\n                    <CardContent className=\"px-0\">\n                      <div data-slot=\"card-content\" className=\"group-data...\">\n                        <div className=\"portal-for...\">\n                          <div className=\"portal-field\">\n                            <Label>\n                            <Input id=\"email\" type=\"email\" value=\"\" onChange={function onChange}>\n                              <Input type=\"email\" data-slot=\"input\" className=\"h-8 w-full...\" id=\"email\" value=\"\" ...>\n                                <FieldControl ref={null} type=\"email\" data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                  <input\n                                    id=\"email\"\n                                    disabled={false}\n                                    name={undefined}\n                                    ref={function}\n                                    aria-labelledby={undefined}\n                                    autoFocus={false}\n                                    value=\"\"\n                                    onChange={function}\n                                    onFocus={function onFocus}\n                                    onBlur={function onBlur}\n                                    onKeyDown={function onKeyDown}\n                                    type=\"email\"\n                                    data-slot=\"input\"\n                                    className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5...\"\n-                                   style={{caret-color:\"transparent\"}}\n                                  >\n                          <div className=\"grid gap-4...\">\n                            <div className=\"portal-field\">\n                              <Label>\n                              <Input id=\"password\" type=\"password\" value=\"\" onChange={function onChange}>\n                                <Input type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" id=\"password\" value=\"\" ...>\n                                  <FieldControl ref={null} type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                    <input\n                                      id=\"password\"\n                                      disabled={false}\n                                      name={undefined}\n                                      ref={function}\n                                      aria-labelledby={undefined}\n                                      autoFocus={false}\n                                      value=\"\"\n                                      onChange={function}\n                                      onFocus={function onFocus}\n                                      onBlur={function onBlur}\n                                      onKeyDown={function onKeyDown}\n                                      type=\"password\"\n                                      data-slot=\"input\"\n                                      className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2...\"\n-                                     style={{caret-color:\"transparent\"}}\n                                    >\n                            <div className=\"portal-field\">\n                              <Label>\n                              <Input id=\"confirmPas...\" type=\"password\" value=\"\" onChange={function onChange}>\n                                <Input type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" id=\"confirmPas...\" ...>\n                                  <FieldControl ref={null} type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                    <input\n                                      id=\"confirmPassword\"\n                                      disabled={false}\n                                      name={undefined}\n                                      ref={function}\n                                      aria-labelledby={undefined}\n                                      autoFocus={false}\n                                      value=\"\"\n                                      onChange={function}\n                                      onFocus={function onFocus}\n                                      onBlur={function onBlur}\n                                      onKeyDown={function onKeyDown}\n                                      type=\"password\"\n                                      data-slot=\"input\"\n                                      className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2...\"\n-                                     style={{caret-color:\"transparent\"}}\n                                    >\n                          <div className=\"portal-con...\">\n                            <div className=\"flex items...\">\n                              <Checkbox id=\"consent-data\" checked={false} onCheckedChange={function onCheckedChange}>\n                                <CheckboxRoot data-slot=\"checkbox\" className=\"peer relat...\" id=\"consent-data\" ...>\n                                  <span>\n                                  <input\n                                    checked={false}\n                                    disabled={false}\n                                    name={undefined}\n                                    id=\"consent-data\"\n                                    required={false}\n                                    ref={function}\n                                    style={{\n+                                     clipPath: \"inset(50%)\"\n+                                     overflow: \"hidden\"\n+                                     whiteSpace: \"nowrap\"\n+                                     border: 0\n+                                     padding: 0\n+                                     width: 1\n-                                     width: \"1px\"\n+                                     height: 1\n-                                     height: \"1px\"\n+                                     margin: -1\n+                                     position: \"fixed\"\n-                                     position: \"fixed\"\n+                                     top: 0\n-                                     top: \"0px\"\n+                                     left: 0\n-                                     left: \"0px\"\n-                                     clip-path: \"inset(50%)\"\n-                                     overflow-x: \"hidden\"\n-                                     overflow-y: \"hidden\"\n-                                     white-space-collapse: \"collapse\"\n-                                     text-wrap-mode: \"nowrap\"\n-                                     border-top-width: \"0px\"\n-                                     border-right-width: \"0px\"\n-                                     border-bottom-width: \"0px\"\n-                                     border-left-width: \"0px\"\n-                                     border-top-style: \"initial\"\n-                                     border-right-style: \"initial\"\n-                                     border-bottom-style: \"initial\"\n-                                     border-left-style: \"initial\"\n-                                     border-top-color: \"initial\"\n-                                     border-right-color: \"initial\"\n-                                     border-bottom-color: \"initial\"\n-                                     border-left-color: \"initial\"\n-                                     border-image-source: \"initial\"\n-                                     border-image-slice: \"initial\"\n-                                     border-image-width: \"initial\"\n-                                     border-image-outset: \"initial\"\n-                                     border-image-repeat: \"initial\"\n-                                     padding-top: \"0px\"\n-                                     padding-right: \"0px\"\n-                                     padding-bottom: \"0px\"\n-                                     padding-left: \"0px\"\n-                                     margin-top: \"-1px\"\n-                                     margin-right: \"-1px\"\n-                                     margin-bottom: \"-1px\"\n-                                     margin-left: \"-1px\"\n-                                     caret-color: \"transparent\"\n                                    }}\n                                    tabIndex={-1}\n                                    type=\"checkbox\"\n                                    aria-hidden={true}\n                                    onChange={function onChange}\n                                    onFocus={function onFocus}\n                                  >\n                              ...\n                            <div className=\"mt-4 flex ...\">\n                              <Checkbox id=\"consent-terms\" checked={false} onCheckedChange={function onCheckedChange}>\n                                <CheckboxRoot data-slot=\"checkbox\" className=\"peer relat...\" id=\"consent-terms\" ...>\n                                  <span>\n                                  <input\n                                    checked={false}\n                                    disabled={false}\n                                    name={undefined}\n                                    id=\"consent-terms\"\n                                    required={false}\n                                    ref={function}\n                                    style={{\n+                                     clipPath: \"inset(50%)\"\n+                                     overflow: \"hidden\"\n+                                     whiteSpace: \"nowrap\"\n+                                     border: 0\n+                                     padding: 0\n+                                     width: 1\n-                                     width: \"1px\"\n+                                     height: 1\n-                                     height: \"1px\"\n+                                     margin: -1\n+                                     position: \"fixed\"\n-                                     position: \"fixed\"\n+                                     top: 0\n-                                     top: \"0px\"\n+                                     left: 0\n-                                     left: \"0px\"\n-                                     clip-path: \"inset(50%)\"\n-                                     overflow-x: \"hidden\"\n-                                     overflow-y: \"hidden\"\n-                                     white-space-collapse: \"collapse\"\n-                                     text-wrap-mode: \"nowrap\"\n-                                     border-top-width: \"0px\"\n-                                     border-right-width: \"0px\"\n-                                     border-bottom-width: \"0px\"\n-                                     border-left-width: \"0px\"\n-                                     border-top-style: \"initial\"\n-                                     border-right-style: \"initial\"\n-                                     border-bottom-style: \"initial\"\n-                                     border-left-style: \"initial\"\n-                                     border-top-color: \"initial\"\n-                                     border-right-color: \"initial\"\n-                                     border-bottom-color: \"initial\"\n-                                     border-left-color: \"initial\"\n-                                     border-image-source: \"initial\"\n-                                     border-image-slice: \"initial\"\n-                                     border-image-width: \"initial\"\n-                                     border-image-outset: \"initial\"\n-                                     border-image-repeat: \"initial\"\n-                                     padding-top: \"0px\"\n-                                     padding-right: \"0px\"\n-                                     padding-bottom: \"0px\"\n-                                     padding-left: \"0px\"\n-                                     margin-top: \"-1px\"\n-                                     margin-right: \"-1px\"\n-                                     margin-bottom: \"-1px\"\n-                                     margin-left: \"-1px\"\n-                                     caret-color: \"transparent\"\n                                    }}\n                                    tabIndex={-1}\n                                    type=\"checkbox\"\n                                    aria-hidden={true}\n                                    onChange={function onChange}\n                                    onFocus={function onFocus}\n                                  >\n                              ...\n                          ...\n            ...\n",
+      "page": "http://localhost:3000/onboard",
+      "context": "visit:/onboard"
+    },
+    {
+      "type": "error",
+      "text": "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <ClientPageRoot Component={function SignInPage} searchParams={{}} params={{}}>\n      <SignInPage params={Promise} searchParams={Promise}>\n        <div className=\"portal-she...\">\n          <div>\n          <div>\n          <div className=\"portal-aut...\">\n            <div>\n            <div className=\"portal-aut...\">\n              <Card>\n              <Card className=\"portal-aut...\">\n                <div data-slot=\"card\" data-size=\"default\" className={\"group/ca...\"}>\n                  <CardHeader>\n                  <CardContent className=\"px-0\">\n                    <div data-slot=\"card-content\" className=\"group-data...\">\n                      <form className=\"portal-for...\" onSubmit={function handleSignIn}>\n                        <div className=\"portal-field\">\n                          <Label>\n                          <Input id=\"email\" type=\"email\" value=\"\" onChange={function onChange} required={true}>\n                            <Input type=\"email\" data-slot=\"input\" className=\"h-8 w-full...\" id=\"email\" value=\"\" ...>\n                              <FieldControl ref={null} type=\"email\" data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                <input\n                                  id=\"email\"\n                                  disabled={false}\n                                  name={undefined}\n                                  ref={function}\n                                  aria-labelledby={undefined}\n                                  autoFocus={false}\n                                  value=\"\"\n                                  onChange={function}\n                                  onFocus={function onFocus}\n                                  onBlur={function onBlur}\n                                  onKeyDown={function onKeyDown}\n                                  type=\"email\"\n                                  data-slot=\"input\"\n                                  required={true}\n                                  className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 p...\"\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                        <div className=\"portal-field\">\n                          <Label>\n                          <Input id=\"password\" type=\"password\" value=\"\" onChange={function onChange} required={true}>\n                            <Input type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" id=\"password\" value=\"\" ...>\n                              <FieldControl ref={null} type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                <input\n                                  id=\"password\"\n                                  disabled={false}\n                                  name={undefined}\n                                  ref={function}\n                                  aria-labelledby={undefined}\n                                  autoFocus={false}\n                                  value=\"\"\n                                  onChange={function}\n                                  onFocus={function onFocus}\n                                  onBlur={function onBlur}\n                                  onKeyDown={function onKeyDown}\n                                  type=\"password\"\n                                  data-slot=\"input\"\n                                  required={true}\n                                  className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 p...\"\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                        ...\n                      ...\n    ...\n",
+      "page": "http://localhost:3000/signin",
+      "context": "visit:/signin"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Lender Das...\" userInitials=\"CF\" navItems={[...]} mobileMode=\"drawer\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«R79jrndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n",
+      "page": "http://localhost:3000/lender/dashboard/applications?applicationId=cccccccc-cccc-4ccc-8ccc-ccccccccccc1",
+      "context": "visit:/lender/dashboard/applications?applicationId=cccccccc-cccc-4ccc-8ccc-ccccccccccc1"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/lender/dashboard/applications?applicationId=cccccccc-cccc-4ccc-8ccc-ccccccccccc1",
+      "context": "visit:/lender/dashboard/applications?applicationId=cccccccc-cccc-4ccc-8ccc-ccccccccccc1"
+    },
+    {
+      "type": "error",
+      "text": "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <ClientPageRoot Component={function SignInPage} searchParams={{}} params={{}}>\n      <SignInPage params={Promise} searchParams={Promise}>\n        <div className=\"portal-she...\">\n          <div>\n          <div>\n          <div className=\"portal-aut...\">\n            <div>\n            <div className=\"portal-aut...\">\n              <Card>\n              <Card className=\"portal-aut...\">\n                <div data-slot=\"card\" data-size=\"default\" className={\"group/ca...\"}>\n                  <CardHeader>\n                  <CardContent className=\"px-0\">\n                    <div data-slot=\"card-content\" className=\"group-data...\">\n                      <form className=\"portal-for...\" onSubmit={function handleSignIn}>\n                        <div className=\"portal-field\">\n                          <Label>\n                          <Input id=\"email\" type=\"email\" value=\"\" onChange={function onChange} required={true}>\n                            <Input type=\"email\" data-slot=\"input\" className=\"h-8 w-full...\" id=\"email\" value=\"\" ...>\n                              <FieldControl ref={null} type=\"email\" data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                <input\n                                  id=\"email\"\n                                  disabled={false}\n                                  name={undefined}\n                                  ref={function}\n                                  aria-labelledby={undefined}\n                                  autoFocus={false}\n                                  value=\"\"\n                                  onChange={function}\n                                  onFocus={function onFocus}\n                                  onBlur={function onBlur}\n                                  onKeyDown={function onKeyDown}\n                                  type=\"email\"\n                                  data-slot=\"input\"\n                                  required={true}\n                                  className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 p...\"\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                        <div className=\"portal-field\">\n                          <Label>\n                          <Input id=\"password\" type=\"password\" value=\"\" onChange={function onChange} required={true}>\n                            <Input type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" id=\"password\" value=\"\" ...>\n                              <FieldControl ref={null} type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                <input\n                                  id=\"password\"\n                                  disabled={false}\n                                  name={undefined}\n                                  ref={function}\n                                  aria-labelledby={undefined}\n                                  autoFocus={false}\n                                  value=\"\"\n                                  onChange={function}\n                                  onFocus={function onFocus}\n                                  onBlur={function onBlur}\n                                  onKeyDown={function onKeyDown}\n                                  type=\"password\"\n                                  data-slot=\"input\"\n                                  required={true}\n                                  className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 p...\"\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                        ...\n                      ...\n    ...\n",
+      "page": "http://localhost:3000/signin",
+      "context": "visit:/login"
+    },
+    {
+      "type": "error",
+      "text": "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <ClientPageRoot Component={function OnboardPage} searchParams={{}} params={{}}>\n      <OnboardPage params={Promise} searchParams={Promise}>\n        <div className=\"portal-she...\">\n          <div>\n          <div>\n          <div className=\"portal-aut...\">\n            <div>\n            <div className=\"portal-aut...\">\n              <Card>\n              <div className=\"space-y-6\">\n                <div>\n                <Card className=\"portal-aut...\">\n                  <div data-slot=\"card\" data-size=\"default\" className={\"group/ca...\"}>\n                    <CardHeader>\n                    <CardContent className=\"px-0\">\n                      <div data-slot=\"card-content\" className=\"group-data...\">\n                        <div className=\"portal-for...\">\n                          <div className=\"portal-field\">\n                            <Label>\n                            <Input id=\"email\" type=\"email\" value=\"\" onChange={function onChange}>\n                              <Input type=\"email\" data-slot=\"input\" className=\"h-8 w-full...\" id=\"email\" value=\"\" ...>\n                                <FieldControl ref={null} type=\"email\" data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                  <input\n                                    id=\"email\"\n                                    disabled={false}\n                                    name={undefined}\n                                    ref={function}\n                                    aria-labelledby={undefined}\n                                    autoFocus={false}\n                                    value=\"\"\n                                    onChange={function}\n                                    onFocus={function onFocus}\n                                    onBlur={function onBlur}\n                                    onKeyDown={function onKeyDown}\n                                    type=\"email\"\n                                    data-slot=\"input\"\n                                    className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5...\"\n-                                   style={{caret-color:\"transparent\"}}\n                                  >\n                          <div className=\"grid gap-4...\">\n                            <div className=\"portal-field\">\n                              <Label>\n                              <Input id=\"password\" type=\"password\" value=\"\" onChange={function onChange}>\n                                <Input type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" id=\"password\" value=\"\" ...>\n                                  <FieldControl ref={null} type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                    <input\n                                      id=\"password\"\n                                      disabled={false}\n                                      name={undefined}\n                                      ref={function}\n                                      aria-labelledby={undefined}\n                                      autoFocus={false}\n                                      value=\"\"\n                                      onChange={function}\n                                      onFocus={function onFocus}\n                                      onBlur={function onBlur}\n                                      onKeyDown={function onKeyDown}\n                                      type=\"password\"\n                                      data-slot=\"input\"\n                                      className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2...\"\n-                                     style={{caret-color:\"transparent\"}}\n                                    >\n                            <div className=\"portal-field\">\n                              <Label>\n                              <Input id=\"confirmPas...\" type=\"password\" value=\"\" onChange={function onChange}>\n                                <Input type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" id=\"confirmPas...\" ...>\n                                  <FieldControl ref={null} type=\"password\" data-slot=\"input\" className=\"h-8 w-full...\" ...>\n                                    <input\n                                      id=\"confirmPassword\"\n                                      disabled={false}\n                                      name={undefined}\n                                      ref={function}\n                                      aria-labelledby={undefined}\n                                      autoFocus={false}\n                                      value=\"\"\n                                      onChange={function}\n                                      onFocus={function onFocus}\n                                      onBlur={function onBlur}\n                                      onKeyDown={function onKeyDown}\n                                      type=\"password\"\n                                      data-slot=\"input\"\n                                      className=\"h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2...\"\n-                                     style={{caret-color:\"transparent\"}}\n                                    >\n                          <div className=\"portal-con...\">\n                            <div className=\"flex items...\">\n                              <Checkbox id=\"consent-data\" checked={false} onCheckedChange={function onCheckedChange}>\n                                <CheckboxRoot data-slot=\"checkbox\" className=\"peer relat...\" id=\"consent-data\" ...>\n                                  <span>\n                                  <input\n                                    checked={false}\n                                    disabled={false}\n                                    name={undefined}\n                                    id=\"consent-data\"\n                                    required={false}\n                                    ref={function}\n                                    style={{\n+                                     clipPath: \"inset(50%)\"\n+                                     overflow: \"hidden\"\n+                                     whiteSpace: \"nowrap\"\n+                                     border: 0\n+                                     padding: 0\n+                                     width: 1\n-                                     width: \"1px\"\n+                                     height: 1\n-                                     height: \"1px\"\n+                                     margin: -1\n+                                     position: \"fixed\"\n-                                     position: \"fixed\"\n+                                     top: 0\n-                                     top: \"0px\"\n+                                     left: 0\n-                                     left: \"0px\"\n-                                     clip-path: \"inset(50%)\"\n-                                     overflow-x: \"hidden\"\n-                                     overflow-y: \"hidden\"\n-                                     white-space-collapse: \"collapse\"\n-                                     text-wrap-mode: \"nowrap\"\n-                                     border-top-width: \"0px\"\n-                                     border-right-width: \"0px\"\n-                                     border-bottom-width: \"0px\"\n-                                     border-left-width: \"0px\"\n-                                     border-top-style: \"initial\"\n-                                     border-right-style: \"initial\"\n-                                     border-bottom-style: \"initial\"\n-                                     border-left-style: \"initial\"\n-                                     border-top-color: \"initial\"\n-                                     border-right-color: \"initial\"\n-                                     border-bottom-color: \"initial\"\n-                                     border-left-color: \"initial\"\n-                                     border-image-source: \"initial\"\n-                                     border-image-slice: \"initial\"\n-                                     border-image-width: \"initial\"\n-                                     border-image-outset: \"initial\"\n-                                     border-image-repeat: \"initial\"\n-                                     padding-top: \"0px\"\n-                                     padding-right: \"0px\"\n-                                     padding-bottom: \"0px\"\n-                                     padding-left: \"0px\"\n-                                     margin-top: \"-1px\"\n-                                     margin-right: \"-1px\"\n-                                     margin-bottom: \"-1px\"\n-                                     margin-left: \"-1px\"\n-                                     caret-color: \"transparent\"\n                                    }}\n                                    tabIndex={-1}\n                                    type=\"checkbox\"\n                                    aria-hidden={true}\n                                    onChange={function onChange}\n                                    onFocus={function onFocus}\n                                  >\n                              ...\n                            <div className=\"mt-4 flex ...\">\n                              <Checkbox id=\"consent-terms\" checked={false} onCheckedChange={function onCheckedChange}>\n                                <CheckboxRoot data-slot=\"checkbox\" className=\"peer relat...\" id=\"consent-terms\" ...>\n                                  <span>\n                                  <input\n                                    checked={false}\n                                    disabled={false}\n                                    name={undefined}\n                                    id=\"consent-terms\"\n                                    required={false}\n                                    ref={function}\n                                    style={{\n+                                     clipPath: \"inset(50%)\"\n+                                     overflow: \"hidden\"\n+                                     whiteSpace: \"nowrap\"\n+                                     border: 0\n+                                     padding: 0\n+                                     width: 1\n-                                     width: \"1px\"\n+                                     height: 1\n-                                     height: \"1px\"\n+                                     margin: -1\n+                                     position: \"fixed\"\n-                                     position: \"fixed\"\n+                                     top: 0\n-                                     top: \"0px\"\n+                                     left: 0\n-                                     left: \"0px\"\n-                                     clip-path: \"inset(50%)\"\n-                                     overflow-x: \"hidden\"\n-                                     overflow-y: \"hidden\"\n-                                     white-space-collapse: \"collapse\"\n-                                     text-wrap-mode: \"nowrap\"\n-                                     border-top-width: \"0px\"\n-                                     border-right-width: \"0px\"\n-                                     border-bottom-width: \"0px\"\n-                                     border-left-width: \"0px\"\n-                                     border-top-style: \"initial\"\n-                                     border-right-style: \"initial\"\n-                                     border-bottom-style: \"initial\"\n-                                     border-left-style: \"initial\"\n-                                     border-top-color: \"initial\"\n-                                     border-right-color: \"initial\"\n-                                     border-bottom-color: \"initial\"\n-                                     border-left-color: \"initial\"\n-                                     border-image-source: \"initial\"\n-                                     border-image-slice: \"initial\"\n-                                     border-image-width: \"initial\"\n-                                     border-image-outset: \"initial\"\n-                                     border-image-repeat: \"initial\"\n-                                     padding-top: \"0px\"\n-                                     padding-right: \"0px\"\n-                                     padding-bottom: \"0px\"\n-                                     padding-left: \"0px\"\n-                                     margin-top: \"-1px\"\n-                                     margin-right: \"-1px\"\n-                                     margin-bottom: \"-1px\"\n-                                     margin-left: \"-1px\"\n-                                     caret-color: \"transparent\"\n                                    }}\n                                    tabIndex={-1}\n                                    type=\"checkbox\"\n                                    aria-hidden={true}\n                                    onChange={function onChange}\n                                    onFocus={function onFocus}\n                                  >\n                              ...\n                          ...\n            ...\n",
+      "page": "http://localhost:3000/onboard",
+      "context": "visit:/signup"
+    },
+    {
+      "type": "error",
+      "text": "In HTML, %s cannot be a descendant of <%s>.\nThis will cause a hydration error.%s <button> button \n\n  ...\n    <DashboardShell title=\"Consumer D...\" userInitials=\"PS\" navItems={[...]} mobileMode=\"bottom-nav\" ...>\n      <div className=\"min-h-scre...\">\n        <div className=\"flex min-h...\">\n          <aside>\n          <div className=\"flex flex-...\">\n            <header className=\"sticky top...\">\n              <div className=\"flex h-16 ...\">\n                <div>\n                <div className=\"flex items...\">\n                  <Button>\n                  <DropdownMenu>\n                    <MenuRoot data-slot=\"dropdown-menu\">\n                      <FloatingTree externalTree={{nodesRef:{...}, ...}}>\n                        <DropdownMenuTrigger>\n                          <MenuTrigger data-slot=\"dropdown-m...\">\n>                           <button\n>                             type=\"button\"\n>                             onClick={function onClick}\n>                             onMouseDown={function onMouseDown}\n>                             onKeyDown={function}\n>                             onKeyUp={function onKeyUp}\n>                             onPointerDown={function onPointerDown}\n>                             tabIndex={0}\n>                             disabled={false}\n>                             aria-haspopup=\"menu\"\n>                             id=\"base-ui-«Rej7ndl7»\"\n>                             data-slot=\"dropdown-menu-trigger\"\n>                             ref={function}\n>                           >\n                              <Button variant=\"ghost\" className=\"h-10 round...\">\n>                               <button\n>                                 data-slot=\"button\"\n>                                 className={\"group/button inline-flex shrink-0 items-center justify-center border bo...\"}\n>                               >\n                        ...\n            ...\n        ...\n",
+      "page": "http://localhost:3000/dashboard",
+      "context": "mobile"
+    },
+    {
+      "type": "error",
+      "text": "<%s> cannot contain a nested %s.\nSee this log for the ancestor stack trace. button <button>",
+      "page": "http://localhost:3000/dashboard",
+      "context": "mobile"
+    },
+    {
+      "type": "error",
+      "text": "React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. asChild aschild",
+      "page": "http://localhost:3000/dashboard",
+      "context": "mobile"
+    },
+    {
+      "type": "warning",
+      "text": "The width(-1) and height(-1) of chart should be greater than 0,\n       please check the style of container, or the props width(100%) and height(100%),\n       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the\n       height and width.",
+      "page": "http://localhost:3000/dashboard",
+      "context": "mobile"
+    }
+  ],
+  "runtimeErrors": [
+    {
+      "page": "http://localhost:3000/dashboard",
+      "context": "visit:/dashboard",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/dashboard/report",
+      "context": "visit:/dashboard/report",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/dashboard/documents",
+      "context": "visit:/dashboard/documents",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/dashboard/applications",
+      "context": "visit:/dashboard/applications",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/dashboard/settings",
+      "context": "visit:/dashboard/settings",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/dashboard/documents",
+      "context": "visit:/dashboard/settings",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/dashboard",
+      "context": "visit:/dashboard/settings",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/lender/onboard",
+      "context": "Lender Onboarding",
+      "message": "Failed to execute 'writeText' on 'Clipboard': Write permission denied."
+    },
+    {
+      "page": "http://localhost:3000/lender/dashboard",
+      "context": "visit:/lender/dashboard",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/lender/dashboard/applications",
+      "context": "visit:/lender/dashboard/applications",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/lender/dashboard/search",
+      "context": "visit:/lender/dashboard/search",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/lender/dashboard/api-keys",
+      "context": "visit:/lender/dashboard/webhooks",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/lender/dashboard/webhooks",
+      "context": "visit:/lender/dashboard/webhooks",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/lender/dashboard/settings",
+      "context": "visit:/lender/dashboard/settings",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/lender/dashboard/applications",
+      "context": "visit:/lender/dashboard/settings",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/lender/dashboard/applications?applicationId=cccccccc-cccc-4ccc-8ccc-ccccccccccc1",
+      "context": "visit:/lender/dashboard/applications?applicationId=cccccccc-cccc-4ccc-8ccc-ccccccccccc1",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    },
+    {
+      "page": "http://localhost:3000/dashboard",
+      "context": "mobile",
+      "message": "Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\nhttps://react.dev/link/hydration-mismatch"
+    }
+  ],
+  "networkErrors": [
+    {
+      "page": "http://localhost:3000/#countries",
+      "context": "visit:/",
+      "url": "http://localhost:3000/?_rsc=rxx9e",
+      "method": "GET",
+      "status": null,
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "page": "http://localhost:3000/dashboard/settings",
+      "context": "visit:/dashboard/settings",
+      "url": "http://localhost:3000/api/v1/me/export?user_id=11111111-1111-4111-8111-111111111111",
+      "method": "GET",
+      "status": null,
+      "reason": "net::ERR_ABORTED"
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "route-home",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\01-route-home.png",
+      "url": "http://localhost:3000/"
+    },
+    {
+      "label": "consumer-onboard-entry",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\02-consumer-onboard-entry.png",
+      "url": "http://localhost:3000/onboard"
+    },
+    {
+      "label": "consumer-onboard-step2",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\03-consumer-onboard-step2.png",
+      "url": "http://localhost:3000/onboard"
+    },
+    {
+      "label": "consumer-onboard-step3",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\04-consumer-onboard-step3.png",
+      "url": "http://localhost:3000/onboard"
+    },
+    {
+      "label": "consumer-onboard-step4",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\05-consumer-onboard-step4.png",
+      "url": "http://localhost:3000/onboard"
+    },
+    {
+      "label": "consumer-dashboard-after-onboard",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\06-consumer-dashboard-after-onboard.png",
+      "url": "http://localhost:3000/dashboard"
+    },
+    {
+      "label": "route--dashboard",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\07-route-dashboard.png",
+      "url": "http://localhost:3000/dashboard"
+    },
+    {
+      "label": "consumer-dashboard-share-dialog",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\08-consumer-dashboard-share-dialog.png",
+      "url": "http://localhost:3000/dashboard"
+    },
+    {
+      "label": "route--dashboard-report",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\09-route-dashboard-report.png",
+      "url": "http://localhost:3000/dashboard/report"
+    },
+    {
+      "label": "route--dashboard-documents",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\10-route-dashboard-documents.png",
+      "url": "http://localhost:3000/dashboard/documents"
+    },
+    {
+      "label": "route--dashboard-applications",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\11-route-dashboard-applications.png",
+      "url": "http://localhost:3000/dashboard/applications"
+    },
+    {
+      "label": "route--dashboard-settings",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\12-route-dashboard-settings.png",
+      "url": "http://localhost:3000/dashboard/settings"
+    },
+    {
+      "label": "consumer-documents-upload-modal",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\13-consumer-documents-upload-modal.png",
+      "url": "http://localhost:3000/dashboard/documents"
+    },
+    {
+      "label": "consumer-settings-delete-dialog",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\14-consumer-settings-delete-dialog.png",
+      "url": "http://localhost:3000/dashboard/settings"
+    },
+    {
+      "label": "lender-onboard-step1",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\15-lender-onboard-step1.png",
+      "url": "http://localhost:3000/lender/onboard"
+    },
+    {
+      "label": "lender-onboard-step2",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\16-lender-onboard-step2.png",
+      "url": "http://localhost:3000/lender/onboard"
+    },
+    {
+      "label": "lender-onboard-step3",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\17-lender-onboard-step3.png",
+      "url": "http://localhost:3000/lender/onboard"
+    },
+    {
+      "label": "lender-onboard-step4",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\18-lender-onboard-step4.png",
+      "url": "http://localhost:3000/lender/onboard"
+    },
+    {
+      "label": "lender-dashboard-after-onboard",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\19-lender-dashboard-after-onboard.png",
+      "url": "http://localhost:3000/lender/dashboard"
+    },
+    {
+      "label": "route--lender-dashboard",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\20-route-lender-dashboard.png",
+      "url": "http://localhost:3000/lender/dashboard"
+    },
+    {
+      "label": "lender-dashboard-api-usage-tab",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\21-lender-dashboard-api-usage-tab.png",
+      "url": "http://localhost:3000/lender/dashboard"
+    },
+    {
+      "label": "route--lender-dashboard-applications",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\22-route-lender-dashboard-applications.png",
+      "url": "http://localhost:3000/lender/dashboard/applications"
+    },
+    {
+      "label": "route--lender-dashboard-search",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\23-route-lender-dashboard-search.png",
+      "url": "http://localhost:3000/lender/dashboard/search"
+    },
+    {
+      "label": "route--lender-dashboard-api-keys",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\24-route-lender-dashboard-api-keys.png",
+      "url": "http://localhost:3000/lender/dashboard/api-keys"
+    },
+    {
+      "label": "route--lender-dashboard-webhooks",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\25-route-lender-dashboard-webhooks.png",
+      "url": "http://localhost:3000/lender/dashboard/webhooks"
+    },
+    {
+      "label": "route--lender-dashboard-settings",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\26-route-lender-dashboard-settings.png",
+      "url": "http://localhost:3000/lender/dashboard/settings"
+    },
+    {
+      "label": "route--lender-onboard",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\27-route-lender-onboard.png",
+      "url": "http://localhost:3000/lender/onboard"
+    },
+    {
+      "label": "route--onboard",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\28-route-onboard.png",
+      "url": "http://localhost:3000/onboard"
+    },
+    {
+      "label": "route--privacy",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\29-route-privacy.png",
+      "url": "http://localhost:3000/privacy"
+    },
+    {
+      "label": "route--terms",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\30-route-terms.png",
+      "url": "http://localhost:3000/terms"
+    },
+    {
+      "label": "route--signin",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\31-route-signin.png",
+      "url": "http://localhost:3000/signin"
+    },
+    {
+      "label": "route--lender-dashboard-applications?applicationId=cccccccc-cccc-4ccc-8ccc-ccccccccccc1",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\32-route-lender-dashboard-applications-applicationid-cccccccc-cccc-4ccc-8ccc-ccccccccccc1.png",
+      "url": "http://localhost:3000/lender/dashboard/applications?applicationId=cccccccc-cccc-4ccc-8ccc-ccccccccccc1"
+    },
+    {
+      "label": "route--login",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\33-route-login.png",
+      "url": "http://localhost:3000/signin"
+    },
+    {
+      "label": "route--signup",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\34-route-signup.png",
+      "url": "http://localhost:3000/onboard"
+    },
+    {
+      "label": "mobile-landing",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\35-mobile-landing.png",
+      "url": "http://localhost:3000/"
+    },
+    {
+      "label": "mobile-consumer-dashboard",
+      "path": "D:\\code\\ai-hackathon\\nova-credit-clone\\qa-artifacts\\2026-03-14T11-17-45-747Z\\screenshots\\36-mobile-consumer-dashboard.png",
+      "url": "http://localhost:3000/dashboard"
+    }
+  ],
+  "notes": []
+}

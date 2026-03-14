@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CreditBridge
 
-## Getting Started
+CreditBridge is a cross-border credit intelligence platform that translates immigrant credit history into a US-readable lending profile.
 
-First, run the development server:
+## Stack
+
+- Next.js 15 (App Router, TypeScript strict mode)
+- Supabase (Auth + PostgreSQL + RLS)
+- Tailwind CSS + shadcn/ui
+- Recharts
+- Zod validation
+- Vercel deployment target
+
+## Environment Variables
+
+Create `.env.local` with:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+CREDITBRIDGE_SERVICE_ROLE_KEY=your-service-role-key
+CREDITBRIDGE_ALLOWED_ORIGIN=https://yourdomain.vercel.app
+CREDITBRIDGE_WEBHOOK_SECRET=your-webhook-secret
+```
+
+`CREDITBRIDGE_SERVICE_ROLE_KEY` is used by `scripts/seed.ts`. If it is unset, the seed script also checks `SUPABASE_SERVICE_ROLE_KEY`.
+
+For direct Postgres clients, use a pooled URL in production:
+
+```bash
+SUPABASE_DB_URL=postgresql://.../postgres?pgbouncer=true&connection_limit=1
+```
+
+## Install
+
+```bash
+npm install
+```
+
+## Run
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Database Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Open your Supabase SQL editor.
+2. Run [`supabase/migrations/20260314102000_creditbridge_init.sql`](./supabase/migrations/20260314102000_creditbridge_init.sql).
+3. Confirm all tables are created and RLS is enabled.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Seed Demo Data
 
-## Learn More
+```bash
+npx ts-node scripts/seed.ts
+```
 
-To learn more about Next.js, take a look at the following resources:
+Seed script provisions:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 5 supported countries
+- 5 demo consumers (password: `Demo@1234`)
+- 2 demo lenders (password: `Demo@1234`)
+- credit profiles, risk assessments, timeline entries, documents, applications, and API keys
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Key Routes
 
-## Deploy on Vercel
+- Landing page: `/`
+- Consumer onboarding: `/onboard`
+- Consumer dashboard: `/dashboard`
+- Lender onboarding: `/lender/onboard`
+- Lender dashboard: `/lender/dashboard`
+- External API: `/api/v1/*`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Verification Commands
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx tsc --noEmit
+npx next build
+```
+
+## Deploy to Vercel
+
+1. Push repository to GitHub.
+2. Import in Vercel.
+3. Add environment variables listed above.
+4. Deploy.
+5. Run `npx ts-node scripts/seed.ts` against production Supabase.
+
+## Smoke Test Checklist
+
+- Landing page renders all sections and is responsive.
+- Consumer can complete 5-step onboarding.
+- Consumer dashboard shows score, gauge, breakdown, flags.
+- Document upload interactions work.
+- Lender dashboard shows seeded applications and decisions.
+- API endpoints require API key and return envelope format.
+- Mobile layout works at 375px for landing + consumer dashboard.
